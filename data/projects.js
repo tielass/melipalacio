@@ -1,0 +1,65 @@
+export const projects = [
+    {
+        id: 1,
+        title: "Die drei ??? und die singende Schlange",
+        thumbnail: "/images/thumbnails/BBR_Thumbnails.jpg",
+        category: "Motion Design",
+        description: "A captivating motion design project featuring abstract circular patterns with dynamic color transitions.",
+    },
+    {
+        id: 2,
+        title: "Die Drei ??? und die schwarze Katze",
+        thumbnail: "/images/thumbnails/BBR2_Thumbnails.jpg",
+        category: "Motion Design",
+        description: "An artistic exploration of spherical forms with organic color compositions.",
+    },
+    {
+        id: 3,
+        title: "Janus Faced",
+        thumbnail: "/images/thumbnails/Janus_Thumbnails.jpg",
+        category: "Motion Design",
+        description: "A complex gradient pattern piece with radiating lines creating depth and movement.",
+    },
+    {
+        id: 4,
+        title: "Bubbles",
+        thumbnail: "/images/thumbnails/Bubbles_Thumbnail.jpg",
+        category: "Dance Performance",
+        description: "A dance performance piece exploring the relationship between movement and space.",
+    },
+    {
+        id: 5,
+        title: "Diosa",
+        thumbnail: "/images/thumbnails/Diosa_Thumbnail.jpg",
+        category: "Dance Performance",
+        description: "An expressive dance piece celebrating feminine power and grace.",
+    },
+    {
+        id: 6,
+        title: "Projekt-S",
+        thumbnail: "/images/thumbnails/Projekt-S_Thumbnails.jpg",
+        category: "Motion Design",
+        description: "A collaborative project exploring the intersection of technology and art.",
+    },
+    {
+        id: 7,
+        title: "SPACE",
+        thumbnail: "/images/thumbnails/SPACE_Thumbnails.jpg",
+        category: "Motion Design",
+        description: "An immersive visual experience exploring cosmic themes and spatial relationships.",
+    },
+    {
+        id: 8,
+        title: "Katze",
+        thumbnail: "/images/thumbnails/Katze_Thumbnails.jpg",
+        category: "Illustration",
+        description: "A whimsical illustration project featuring feline-inspired designs.",
+    },
+    {
+        id: 9,
+        title: "Motion Study",
+        thumbnail: "/images/thumbnails/BBR_Thumbnails.jpg",
+        category: "Motion Design",
+        description: "An experimental study of movement and form in digital space.",
+    }
+];
