@@ -71,7 +71,7 @@ export default function AboutSection() {
           <AboutColumn>
             <AboutPortraitImage>
               <Image
-                src="/images/meli-photo.jpg"
+                src="/images/meli-photo-web.webp"
                 alt="Meli portrait"
                 fill
                 style={{ objectFit: "cover" }}
