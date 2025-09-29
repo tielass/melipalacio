@@ -27,7 +27,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const SectionDescription = styled.p`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #030335;
   max-width: 1200px;
@@ -43,7 +43,7 @@ export const SectionDescription = styled.p`
 export const VideoContainer = styled.div`
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   aspect-ratio: 16/9;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);

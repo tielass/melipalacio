@@ -1,0 +1,46 @@
+import styled from "@emotion/styled";
+import { theme } from "../../styles/theme";
+
+export const InfoContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background-color: ${theme.colors.gray[100]};
+  padding: 3rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+`;
+
+export const InfoItem = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const InfoIcon = styled.div`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: ${theme.colors.primary};
+`;
+
+export const InfoTitle = styled.h3`
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: ${theme.colors.primary};
+  margin: 0 0 1rem 0;
+`;
+
+export const InfoDescription = styled.p`
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: ${theme.colors.gray[600]};
+  margin: 0;
+  text-align: center;
+`;

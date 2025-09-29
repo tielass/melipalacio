@@ -7,12 +7,23 @@ export const NavbarContainer = styled.nav`
   left: 0;
   right: 0;
   z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  min-height: 200px;
+
+  @media (max-width: 768px) {
+    min-height: 100px;
+  }
+`;
+
+export const NavbarContent = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
-  transition: all 0.3s ease;
+  width: 100%;
 
   @media (max-width: 768px) {
     padding: 1.5rem 2rem;
@@ -21,23 +32,48 @@ export const NavbarContainer = styled.nav`
   }
 `;
 
+export const NavbarBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+`;
+
 export const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   a {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
   }
-  
+
   img {
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
   }
-  
+
   &:hover img {
     opacity: 0.8;
     transform: scale(1.05);
