@@ -1,8 +1,10 @@
 export const theme = {
     colors: {
         primary: '#AD50FF', // Purple
-        secondary: '#1E40AF', // Dark blue
-        black: '#000000',
+        secondary: '#030335', // Dark 
+        tertiary: '#EFDCFF', // light pink
+        background: '#E7E6EE',
+        text: '#0B0751',
         white: '#FFFFFF',
         gray: {
             100: '#F3F4F6',

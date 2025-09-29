@@ -35,7 +35,7 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
   padding: 1rem;
-  border: 1px solid ${theme.colors.gray[300]};
+  border: none;
   border-radius: 8px;
   font-size: 1rem;
   background-color: ${theme.colors.gray[100]};
@@ -54,7 +54,7 @@ export const FormInput = styled.input`
 
 export const FormTextarea = styled.textarea`
   padding: 1rem;
-  border: 1px solid ${theme.colors.gray[300]};
+  border: none;
   border-radius: 8px;
   font-size: 1rem;
   background-color: ${theme.colors.gray[100]};

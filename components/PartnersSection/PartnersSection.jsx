@@ -3,22 +3,21 @@ import Image from "next/image";
 import {
   PartnersContainer,
   PartnersHeader,
-  PartnersTitle,
-  PartnersSubtitle,
-  PartnersGrid,
-  PartnerLogo,
+  PartnersGrid, 
+  PartnerLogo,  
 } from "./PartnersSection.styles";
+import { SectionTitle, SectionDescription } from "../../styles/Typography";
 
 export default function PartnersSection() {
   return (
     <PartnersContainer>
       <PartnersHeader>
-        <PartnersTitle>Partners</PartnersTitle>
-        <PartnersSubtitle>
+        <SectionTitle>Partners</SectionTitle>
+        <SectionDescription>
           These logos represent a part of my journey—brands and teams I've been
           lucky to collaborate with. Every partnership has inspired new ideas
           and pushed my work in exciting directions.
-        </PartnersSubtitle>
+        </SectionDescription>
       </PartnersHeader>
 
       <PartnersGrid>

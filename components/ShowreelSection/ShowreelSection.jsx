@@ -1,19 +1,18 @@
 "use client";
+import { ShowreelContainer, VideoContainer } from "./ShowreelSection.styles";
 import {
-  ShowreelContainer,
-  SectionTitle,
-  SectionDescription,
-  VideoContainer,
-} from "./ShowreelSection.styles";
+  ShowreelSectionTitle,
+  ShowreelSectionDescription,
+} from "../../styles/Typography";
 
 export default function ShowreelSection() {
   return (
     <ShowreelContainer>
-      <SectionTitle>Showreel</SectionTitle>
-      <SectionDescription>
+      <ShowreelSectionTitle>Showreel</ShowreelSectionTitle>
+      <ShowreelSectionDescription>
         My showreel brings together motion design and dance, showcasing how I
         tell stories through both visuals and movement.
-      </SectionDescription>
+      </ShowreelSectionDescription>
 
       <VideoContainer>
         <iframe

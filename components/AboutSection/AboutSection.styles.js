@@ -16,26 +16,6 @@ export const AboutHeader = styled.div`
   padding: 0 2rem;
 `;
 
-export const AboutTitle = styled.h2`
-  font-size: 1rem;
-  font-weight: 400;
-  color: ${theme.colors.primary};
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-`;
-
-export const AboutSubtitle = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: ${theme.colors.black};
-  line-height: 1.2;
-  margin: 0;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
 
 export const AboutContent = styled.div`
   max-width: 1200px;
@@ -97,18 +77,4 @@ export const AboutText = styled.div`
   padding: 2rem 0;
 `;
 
-export const AboutTextTitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: ${theme.colors.primary};
-  margin-bottom: 1.5rem;
-  margin-top: 0;
-`;
-
-export const AboutTextContent = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: ${theme.colors.black};
-  margin: 0;
-  font-weight: 400;
-`;
+// AboutTextTitle and AboutTextContent moved to Typography.js

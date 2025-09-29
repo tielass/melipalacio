@@ -13,32 +13,7 @@ export const ProjectsContainer = styled.section`
   }
 `;
 
-export const SectionTitle = styled.h2`
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #AD50FF;
-  margin-bottom: 1.5rem;
-  letter-spacing: 2px;
-
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-`;
-
-export const SectionDescription = styled.p`
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #030335;
-  max-width: 1200px;
-  margin-bottom: 4rem;
-  line-height: 1.6;
-
-  @media (max-width: 768px) {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-  }
-`;
+// SectionTitle and SectionDescription moved to Typography.js
 
 export const ProjectsGrid = styled.div`
   display: grid;
@@ -127,20 +102,7 @@ export const ProjectCardWithHover = styled(ProjectCard)`
   }
 `;
 
-export const ProjectTitle = styled.h3`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  color: white;
-  padding: 2rem 1rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.3;
-  z-index: 2;
-`;
+// ProjectTitle moved to Typography.js as CardTitle
 
 export const ViewAllButton = styled.button`
   margin-top: 4rem;

@@ -3,26 +3,25 @@ import Image from "next/image";
 import {
   AboutContainer,
   AboutHeader,
-  AboutTitle,
-  AboutSubtitle,
   AboutContent,
   AboutRow,
   AboutColumn,
   AboutImage,
   AboutText,
-  AboutTextTitle,
-  AboutTextContent,
   AboutPortraitImage,
 } from "./AboutSection.styles";
+import {
+  SectionTitle,
+  BodyText,
+  SectionDescription,
+} from "../../styles/Typography";
 
 export default function AboutSection() {
   return (
     <AboutContainer>
       <AboutHeader>
-        <AboutTitle>About</AboutTitle>
-        <AboutSubtitle>
-          A glimpse into who I am and what inspires me.
-        </AboutSubtitle>
+        <SectionTitle>About</SectionTitle>
+        <SectionDescription>A glimpse into who I am and what inspires me.</SectionDescription>
       </AboutHeader>
 
       <AboutContent>
@@ -39,16 +38,16 @@ export default function AboutSection() {
           </AboutColumn>
           <AboutColumn>
             <AboutText>
-              <AboutTextTitle>Who am I?</AboutTextTitle>
-              <AboutTextContent>
-                I'm a motion designer, illustrator, and dancer who loves bringing
-                ideas to life through movement and visuals. Whether it's
-                designing animations, creating illustrations, or performing, I'm
-                always exploring new ways to tell stories. My work is inspired
-                by rhythm, energy, and the beauty of expression in different
-                forms. I enjoy blending creativity with technique to make things
-                that connect with people.
-              </AboutTextContent>
+              <SectionTitle>Who am I?</SectionTitle>
+              <BodyText>
+                I'm a motion designer, illustrator, and dancer who loves
+                bringing ideas to life through movement and visuals. Whether
+                it's designing animations, creating illustrations, or
+                performing, I'm always exploring new ways to tell stories. My
+                work is inspired by rhythm, energy, and the beauty of expression
+                in different forms. I enjoy blending creativity with technique
+                to make things that connect with people.
+              </BodyText>
             </AboutText>
           </AboutColumn>
         </AboutRow>
@@ -56,16 +55,16 @@ export default function AboutSection() {
         <AboutRow>
           <AboutColumn>
             <AboutText>
-              <AboutTextTitle>Who am I?</AboutTextTitle>
-              <AboutTextContent>
-                I'm a motion designer, illustrator, and dancer who loves bringing
-                ideas to life through movement and visuals. Whether it's
-                designing animations, creating illustrations, or performing, I'm
-                always exploring new ways to tell stories. My work is inspired
-                by rhythm, energy, and the beauty of expression in different
-                forms. I enjoy blending creativity with technique to make things
-                that connect with people.
-              </AboutTextContent>
+              <SectionTitle>Who am I?</SectionTitle>
+              <BodyText>
+                I'm a motion designer, illustrator, and dancer who loves
+                bringing ideas to life through movement and visuals. Whether
+                it's designing animations, creating illustrations, or
+                performing, I'm always exploring new ways to tell stories. My
+                work is inspired by rhythm, energy, and the beauty of expression
+                in different forms. I enjoy blending creativity with technique
+                to make things that connect with people.
+              </BodyText>
             </AboutText>
           </AboutColumn>
           <AboutColumn>

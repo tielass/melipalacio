@@ -3,8 +3,6 @@ import Image from "next/image";
 import { projects } from "../../data/projects";
 import {
   ProjectsContainer,
-  SectionTitle,
-  SectionDescription,
   ProjectsGrid,
   ProjectCard,
   ProjectImage,
@@ -14,14 +12,19 @@ import {
   ProjectTitle,
   ViewAllButton,
 } from "./ProjectsSection.styles";
+import {
+  ShowreelSectionTitle,
+  ShowreelSectionDescription,
+  CardTitle,
+} from "../../styles/Typography";
 
 export default function ProjectsSection() {
   return (
     <ProjectsContainer>
-      <SectionTitle>Projects</SectionTitle>
-      <SectionDescription>
+      <ShowreelSectionTitle>Projects</ShowreelSectionTitle>
+      <ShowreelSectionDescription>
         A collection of my work in motion, illustration, and performance...
-      </SectionDescription>
+      </ShowreelSectionDescription>
 
       <ProjectsGrid>
         {projects.slice(0, 9).map((project) => (
@@ -46,7 +49,7 @@ export default function ProjectsSection() {
                 </div>
               </ProjectOverlay>
             </ProjectImage>
-            <ProjectTitle>{project.title}</ProjectTitle>
+            <CardTitle>{project.title}</CardTitle>
           </ProjectCardWithHover>
         ))}
       </ProjectsGrid>

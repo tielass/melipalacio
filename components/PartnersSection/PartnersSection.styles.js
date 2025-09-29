@@ -15,26 +15,7 @@ export const PartnersHeader = styled.div`
   padding: 0 2rem;
 `;
 
-export const PartnersTitle = styled.h2`
-  font-size: 1rem;
-  font-weight: 400;
-  color: ${theme.colors.primary};
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-`;
-
-export const PartnersSubtitle = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: ${theme.colors.black};
-  line-height: 1.2;
-  margin: 0;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
+// PartnersTitle and PartnersSubtitle moved to Typography.js
 
 export const PartnersGrid = styled.div`
   display: grid;
