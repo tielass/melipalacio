@@ -19,7 +19,7 @@ export const ContactHeader = styled.div`
 
 export const ServiceTags = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 4rem;
