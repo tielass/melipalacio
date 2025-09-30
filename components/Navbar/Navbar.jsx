@@ -18,6 +18,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
   const isContactPage = pathname === "/contact";
+  const isPortfolioPage = pathname === "/portfolio";
 
   return (
     <NavbarContainer>
@@ -37,6 +38,17 @@ export default function Navbar() {
           <Image
             src="/images/headers/contact-header.png"
             alt="Contact page background"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </NavbarBackground>
+      )}
+      {isPortfolioPage && (
+        <NavbarBackground>
+          <Image
+            src="/images/headers/portfolio-header.png"
+            alt="Portfolio page background"
             fill
             style={{ objectFit: "cover" }}
             priority
