@@ -1,120 +1,220 @@
 import styled from "@emotion/styled";
+import Link from "next/link";
 import { theme } from "../../styles/theme";
 
 export const ProjectDetailContainer = styled.div`
   min-height: 100vh;
-  background-color: #000;
-  padding: 2rem 4rem;
-  color: white;
-
-  @media (max-width: 768px) {
-    padding: 1rem 2rem;
-  }
+  background-color: #fff;
+  color: #333;
 `;
 
-export const BackButton = styled(Link)`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: ${theme.fonts.primary};
-  margin-bottom: 2rem;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: ${theme.colors.primary};
-  }
-`;
-
-export const ProjectHeader = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-`;
-
-export const ProjectImage = styled.div`
+export const HeaderImage = styled.div`
   position: relative;
   width: 100%;
-  height: 500px;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #111;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  @media (max-width: 768px) {
-    height: 300px;
-  }
-`;
-
-export const ProjectInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
-export const ProjectCategory = styled.span`
-  color: ${theme.colors.primary};
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: ${theme.fonts.primary};
+  height: 300px;
+  background-image: url("/images/headers/portfolio-header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 export const ProjectTitle = styled.h1`
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #333;
   margin: 0;
-  line-height: 1.2;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
   font-family: ${theme.fonts.primary};
 
   @media (max-width: 768px) {
     font-size: 2rem;
+    padding: 1rem 0 0.5rem 0;
   }
 `;
 
 export const ProjectDescription = styled.p`
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #ccc;
+  color: #666;
   margin: 0;
+  text-align: center;
+  padding: 0 2rem 3rem 2rem;
   font-family: ${theme.fonts.primary};
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0 1rem 2rem 1rem;
+  }
 `;
 
-export const ProjectActions = styled.div`
-  margin-top: 1rem;
+export const VideoSection = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
 `;
 
-export const ViewProjectButton = styled.button`
-  background-color: ${theme.colors.primary};
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
+export const VideoContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-color: #000;
   border-radius: 8px;
+  overflow: hidden;
+`;
+
+export const VideoIframe = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+`;
+
+export const VideoTitle = styled.div`
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
   font-size: 1rem;
   font-weight: 600;
-  font-family: ${theme.fonts.primary};
+  z-index: 2;
+`;
+
+export const VideoShare = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 0.9rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+export const ImageGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+`;
+
+export const ImageItem = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Square aspect ratio */
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 
   &:hover {
-    background-color: #9d4edd;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(173, 80, 255, 0.3);
+    transform: scale(1.02);
   }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const ProjectDetails = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem 2rem 1rem;
+  }
+`;
+
+export const LeftColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
+
+export const SectionTitle = styled.h3`
+  color: ${theme.colors.primary};
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: ${theme.fonts.primary};
+`;
+
+export const SectionContent = styled.div`
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  font-family: ${theme.fonts.primary};
+
+  p {
+    margin: 0 0 1rem 0;
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+export const InfoItem = styled.div`
+  margin-bottom: 1rem;
+`;
+
+export const InfoLabel = styled.div`
+  color: ${theme.colors.primary};
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-family: ${theme.fonts.primary};
+`;
+
+export const InfoValue = styled.div`
+  color: #666;
+  font-size: 0.9rem;
+  font-family: ${theme.fonts.primary};
 `;

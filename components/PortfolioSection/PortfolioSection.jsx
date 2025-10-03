@@ -16,36 +16,29 @@ import {
 import { SectionTitle, SectionDescription } from "../../styles/Typography";
 
 const categories = [
-  "Science & Art",
+  "All",
   "Motion Design & Animation",
-  "Dance & Performance",
+  "Dance Performance",
+  "Science & Art",
+  "Painting",
 ];
 
 export default function PortfolioSection() {
-  const [activeCategory, setActiveCategory] = useState("Science & Art");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   // Filter projects based on category
   const filteredProjects = projects.filter((project) => {
-    switch (activeCategory) {
-      case "Science & Art":
-        return (
-          project.category === "Motion Design" ||
-          project.category === "Illustration"
-        );
-      case "Motion Design & Animation":
-        return project.category === "Motion Design";
-      case "Dance & Performance":
-        return project.category === "Dance Performance";
-      default:
-        return true;
+    if (activeCategory === "All") {
+      return true;
     }
+    return project.category === activeCategory;
   });
 
   return (
     <PortfolioContainer>
       <PortfolioHeader>
         <SectionTitle>Projects</SectionTitle>
-        <SectionDescription style={{ color: "white" }}>
+        <SectionDescription>
           A collection of my work in motion, illustration, and performance...
         </SectionDescription>
 

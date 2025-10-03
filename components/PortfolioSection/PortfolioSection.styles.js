@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
 
 export const PortfolioContainer = styled.section`
-  padding: 6rem 4rem 4rem;
+  padding: 16rem 0 4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +34,7 @@ export const CategoryFilters = styled.div`
 export const CategoryFilter = styled.button`
   background: none;
   border: none;
-  color: white;
+  color: ${theme.colors.primary};
   font-size: 1rem;
   font-weight: 600;
   font-family: ${theme.fonts.primary};
@@ -43,8 +43,23 @@ export const CategoryFilter = styled.button`
   position: relative;
   transition: all 0.3s ease;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background-color: ${theme.colors.primary};
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    width: 0;
+  }
+
   &:hover {
-    color: ${theme.colors.primary};
+    &::after {
+      width: 100%;
+    }
   }
 
   ${({ active }) =>
@@ -53,13 +68,7 @@ export const CategoryFilter = styled.button`
     color: ${theme.colors.primary};
     
     &::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: ${theme.colors.primary};
+      width: 100%;
     }
   `}
 
