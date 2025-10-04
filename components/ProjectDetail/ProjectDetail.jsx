@@ -110,7 +110,7 @@ export default function ProjectDetail({
     <ProjectDetailContainer>
       <BackButton href="/portfolio">
         <ChevronLeft size={20} />
-        back
+        Back
       </BackButton>
 
       <HeaderImage />

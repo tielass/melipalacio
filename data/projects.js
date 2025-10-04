@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Die drei ??? und die singende Schlange",
-    thumbnail: "/images/thumbnails/BBR_Thumbnails.jpg",
+    thumbnail: "/images/thumbnails/Projekt-S_Thumbnails.jpg",
     category: "Motion Design & Animation",
     description:
       "Art Direction for a production of Sony Music Entertainment, Germany and HO3RRAUM Media. Look- and layout development, illustration and animation",
@@ -44,25 +44,20 @@ export const projects = [
   {
     id: 2,
     title: "Die Drei ??? und die schwarze Katze",
-    thumbnail: "/images/thumbnails/BBR2_Thumbnails.jpg",
+    thumbnail: "/images/thumbnails/Katze_Thumbnails.jpg",
     category: "Motion Design & Animation",
     description:
-      "A mysterious motion design project featuring dark atmospheric visuals and compelling storytelling elements.",
-    client: "Sony Music Entertainment, Europe and HO3RRAUM Media. 2020",
+      "Art Direction for a production of Sony Music Entertainment, Europe and H03RRAUM Media. Look- and layout development, illustration and animation.",
+    client: "Sony Music Entertainment, Europe and H03RRAUM Media. 2017",
     role: "Art Direction, look concept, illustration and animation",
     animationTechniques:
       "360° Fulldome-Visualisations for a 3D audio play in Spatial Sound",
     software: "Adobe Illustrator, Adobe After Effects",
     team: "Melisa Palacio & Claire Dorweiler",
     concept:
-      "This project explores the mysterious world of 'Die drei ???' through dark, atmospheric visuals that create tension and intrigue. The black cat serves as a central motif throughout the narrative.",
+      "The design is based on features of the 'Drei???' corporate design. Characteristic colors black, white, red, blue are integrated into the 360° projections at harmonious points. The visualization style is based on illustrations of audio play covers by Aiga Rasch/Silvia Christoph, and the style of the 1970s, as the original story dates from this period. Fulldome visualizations show places of the plot to immerse the audience. The three detectives riding a chain carousel, where the visualization turns and transforms in the dome, potentially causing slight dizziness for spectators. Animation is adapted to the dramaturgy of the audio play, with movements in harmony with auditory dynamics at some points, and in contrast at others. Characters are not illustrated directly, but connected with abstract structures for identification with events. Important considerations of the detectives appear in individual typography, forming an outline to the unravelled topic.",
     content:
-      "The story follows The Three Investigators as they encounter a mysterious black cat that leads them through a series of puzzling events. The visual design emphasizes shadows, mystery, and the supernatural elements of the story.",
-    interestingLinks: [
-      "https://dreifragezeichen.de/live/planetarium",
-      "Mystery and Suspense in Motion Design",
-      "Planetarium Visual Experiences",
-    ],
+      "In a small touring circus, detectives Peter, Bob, and Justus investigate a case where a sinister-looking man wants to take an 'ugly stuff cat' by force, steals it, and then searches for more cats via a newspaper ad the next day. The case leads them to various circus members, a lonely house on the coast, a disused amusement park, and a boat trip on the high seas. This is the new and extended version of the popular classic from 1971.",
     images: [
       "/images/portfolio/motion/Die Drei und die schwarze Katze/Erzaheler.jpg",
       "/images/portfolio/motion/Die Drei und die schwarze Katze/Feuer.jpg",
@@ -78,23 +73,20 @@ export const projects = [
     id: 3,
     title: "Janus Faced",
     thumbnail: "/images/thumbnails/Janus_Thumbnails.jpg",
-    category: "Motion Design & Animation",
+    category: "Motion Design & Animation, Dance & Performance",
     description:
-      "A complex gradient pattern piece with radiating lines creating depth and movement.",
-    client: "Independent Project",
-    role: "Art Direction, concept, illustration and animation",
-    animationTechniques: "2D Animation with complex gradient transitions",
-    software: "Adobe Illustrator, Adobe After Effects",
-    team: "Melisa Palacio",
+      "Multimedial performance that combines animation in fulldome format with live dance on stage. Commissioned for the opening of the award gala of the 12th FullDome Festival in Jena. The award of this festival is a Janus, because this double-headed deity has the privilege of seeing 360° films at a glance.",
+    client: "FullDome Festival, Jena, Germany. 2018",
+    role: "Art Direction, concept, animation and performance",
+    animationTechniques: "Computer generated animated forms",
+    software: "Adobe After Effects",
+    team: "Melisa Palacio López, Claire Dorweiler",
     concept:
-      "Janus Faced explores the duality of existence through abstract visual language. The piece uses complex gradient patterns and radiating lines to create a sense of depth and movement that reflects the dual nature of the Roman god Janus.",
+      "'Janus-Faced' is about the ability of the god Janus to unite duality. Two dancers, and the fulldome projections interacting with them, embody two extremes that confront each other. These contrasts are reflected in the animation design and the movements, as well as in the position of the dancers. Round, colorful animations combined with flowing movements in dance oppose geometric black and white projections in combination with angular motion sequences and poses. Both characters resemble each other on one side and are contrary on the other side. The performance is an interplay between antagonism, encounter and unity.",
     content:
-      "The animation features intricate patterns that shift and transform, representing the two-faced nature of Janus - looking both to the past and future simultaneously.",
-    interestingLinks: [
-      "Abstract Motion Design",
-      "Gradient Art Techniques",
-      "Mythological Visual Narratives",
-    ],
+      "The performance combines fulldome animation with live dance, where two dancers interact with 360° projections that embody contrasting elements. The visual design alternates between round, colorful animations with flowing dance movements, and geometric black and white projections with angular motion sequences. This creates a dynamic interplay between antagonism, encounter and unity, representing the dual nature of the Roman god Janus who can see both past and future simultaneously.",
+    videoUrl: "https://www.youtube.com/embed/1zpk-fDSBEE",
+    videoTitle: "Janus Faced (Trailer DE)",
     images: [
       "/images/portfolio/motion/Janus Faced/janus-01.webp",
       "/images/portfolio/motion/Janus Faced/janus-02.webp",
@@ -115,23 +107,28 @@ export const projects = [
     id: 4,
     title: "Black Body Radiation",
     thumbnail: "/images/thumbnails/BBR_Thumbnails.jpg",
-    category: "Motion Design & Animation",
+    category: "Science & Art, Motion Design & Animation, Dance & Performance",
     description:
-      "A scientific visualization exploring the concept of black body radiation through motion design.",
-    client: "Educational Institution",
-    role: "Art Direction, scientific visualization, animation",
-    animationTechniques: "Scientific visualization with particle systems",
-    software: "Adobe After Effects, Cinema 4D",
-    team: "Melisa Palacio",
+      "Multimedia performance which combines animation, video, sound, video mapping and stage design. It contributes to build an interdisciplinary bridge between science and art taking as a starting point the blackbody radiation experiment made by Max Planck in 1900, which is the beginning of quantum mechanics.",
+    client: "Bauhaus Universität, Weimar. 2016",
+    role: "Concept, project management, animation, editing, choreography, photography and stage design",
+    animationTechniques:
+      "Trapcode Suite (After Effects), Legetrick, Stopmotion",
+    software: "Adobe After Effects, Premier, Dragon Frame",
+    team: "Melisa Palacio López",
+    soundComposition: "Bert Liebold // noise canteen",
+    videotechnician: "Jakob Stolz",
+    cameraPerformanceDocumentation: "Alexander Graeff, Marina Belikova",
+    stageLighting: "David Leroy, Alexander Graeff",
+    degreeWork: "Media Art and Design (M.F.A.)",
+    mark: "1.0 and Summa Cum Laude",
+    awards: "Bauhaus Graduation Scholarship",
+    nominations: "'Media Art Award 2016'; Bauhaus Universität - Weimar",
     concept:
-      "This project visualizes the complex physics concept of black body radiation through engaging motion graphics. The animation demonstrates how objects emit electromagnetic radiation based on their temperature.",
+      "Physicists mean by a 'body' and 'radiation' something other than dancers. Our multimedial performance illustrates the interplay of meanings. Black Bodies are not only understood in the performance objectively and physically, but also subjectively; as a metaphor into a limited space, into which photons, atoms, human mind and human bodies act and interact – in other words: dance. The light is the energy that vibrates and oscillates inside this space, inside the blackbody cavity it collides against the walls, pursues not to be confined and heats the body. BLACK BODY RADIATION develops a hybrid language, able to connect science and performing arts rather than to explain scientific theories in the usual words and to provide them with attractive pictures. The scientific revolutions that have moved the human spirit, modern society and science, lay the foundation for such a bridge of communication. With this, scientific discoveries can be exposed to people in an artistic way, so that another vision of science is possible.",
     content:
-      "The visualization shows the relationship between temperature and radiation wavelength, using color and movement to make abstract scientific concepts accessible and visually compelling.",
-    interestingLinks: [
-      "Scientific Visualization",
-      "Physics in Motion Design",
-      "Educational Animation",
-    ],
+      "The scenes take place onto semi transparent screens placed at an angle. The performers interact with projections illustrating characteristics of light in different proportions. The dramaturgical curve starts at the Planck's blackbody, clips the chemical effects of light on photographic paper and stretches up to the interaction of people in urban areas. The phases of the Performance reflect the mutability over the conception of body: in physical experiments, he is an object, in each subject he is made of flesh and blood, as a city, it contains the body movements of people, lights, emotions and collisions.",
+    videoUrl: "https://player.vimeo.com/video/167741666",
     images: [
       "/images/portfolio/motion/Black Body Radiation/bbr-show-02.webp",
       "/images/portfolio/motion/Black Body Radiation/bbr-show-03.webp",
@@ -162,23 +159,21 @@ export const projects = [
     id: 5,
     title: "SPACE",
     thumbnail: "/images/thumbnails/SPACE_Thumbnails.jpg",
-    category: "Motion Design & Animation",
+    category: "Science & Art, Motion Design & Animation, Dance & Performance",
     description:
-      "An immersive visual experience exploring cosmic themes and spatial relationships.",
-    client: "Planetarium Project",
-    role: "Art Direction, space visualization, animation",
-    animationTechniques: "360° Fulldome-Visualisations with cosmic themes",
-    software: "Adobe After Effects, Cinema 4D",
-    team: "Melisa Palacio",
+      "SPACE is the conception and mixture of design techniques with scientific concepts. It presents a performance piece with animation and videos combining live music and dance over a paper screen.",
+    client: "Bauhaus Universität, Weimar",
+    role: "Conception, choreography and animation",
+    animationTechniques: "Digital painting, rotoscopy",
+    software: "Adobe After Effects, Premier, TV Paint",
+    team: "Melisa Palacio López",
+    liveSoundComposition: "noise canteen // pleines & liebold",
     concept:
-      "SPACE takes viewers on a journey through the cosmos, exploring the vastness of space and our place within it. The project combines scientific accuracy with artistic interpretation to create an awe-inspiring experience.",
+      "The project is based on three conceptions of space. Gilles Deleuze and territory: The body interacts with space through movement and a black line. Bodies create new territories while preserving immutable human aspects. The ideas of Leibniz: The transformation of images into new architectures, Einstein's conceptions, and the animation's relation to geodesic forms, grids, and spacetime curvature influenced by gravitational fields. The body constitutes spacetime.",
     content:
-      "The animation features stunning visualizations of galaxies, nebulae, and cosmic phenomena, designed to inspire wonder and curiosity about the universe.",
-    interestingLinks: [
-      "Cosmic Visualization",
-      "Space Art and Science",
-      "Planetarium Experiences",
-    ],
+      "This performance piece combines live music and dance with animation and videos projected over a paper screen. The work explores the intersection of scientific concepts with artistic expression, creating a multimedia experience that examines how bodies interact with space, how images transform into new architectures, and how gravitational fields influence the curvature of spacetime. The performance demonstrates the body's role in constituting spacetime itself.",
+    videoUrl: "https://www.youtube.com/embed/rd8cwCmA4Ak",
+    videoTitle: "SPACE (Trailer DE)",
     images: [
       "/images/portfolio/motion/S P A C E/space-portfolio-01.webp",
       "/images/portfolio/motion/S P A C E/space-portfolio-02.webp",
@@ -204,23 +199,22 @@ export const projects = [
     id: 6,
     title: "La Diosa del Agua",
     thumbnail: "/images/thumbnails/Diosa_Thumbnail.jpg",
-    category: "Dance Performance",
+    category: "Motion Design & Animation, Dance & Performance",
     description:
-      "An expressive dance piece celebrating feminine power and grace through water-themed choreography.",
-    client: "Dance Performance",
-    role: "Choreography, performance, visual design",
-    animationTechniques: "Live performance with projected visuals",
-    software: "Adobe After Effects, Live Performance",
-    team: "Melisa Palacio",
+      "La Diosa del Agua merges several animation techniques resulting in a live performance. Dance, animation and video are combined to present a personal interpretation of the deity of water: bright, mobile and colorful. The goddess is awake and with her movement and grace travels into the fluid matter; she bridges heaven and earth through the rainbow and with her beauty and favor expands the forest where a red tree is alive to spread again the water.",
+    client: "Bauhaus Universität - Weimar, Germany",
+    role: "Conception, choreography, dance and animation",
+    animationTechniques:
+      "Stopmotion, legetrick, paint on glass, Adobe After Effects",
+    software: "Adobe After Effects, Premier, Dragon Frame",
+    team: "Melisa Palacio López",
+    soundComposition: "Bert Liebold // noise canteen",
     concept:
-      "La Diosa del Agua (The Water Goddess) is a dance performance that explores themes of femininity, power, and the fluidity of water. The piece combines contemporary dance with projected visual elements.",
+      "The performance is a call to the healing of our source of life. A dancing water that flows, that is pure, courageous and serene. That inhabits its space and that embodies a voice of movement to be heard, so that humans, who well since ancient times venerate and care for water, become more aware and have a broader vision of love and care for our vital element. The piece invites to the reflection that it is possible to reconnect with nature and seek its purity, its health and therefore that of ourselves as a species.",
     content:
-      "The performance features flowing movements that mimic water, combined with visual projections that enhance the aquatic theme and create an immersive experience for the audience.",
-    interestingLinks: [
-      "Contemporary Dance",
-      "Performance Art",
-      "Water-themed Choreography",
-    ],
+      "The creative process then includes a part of solo dance and choreographic experimentation, then a search phase for visual aesthetics and color palette to later define the staging and thus the audiovisual edition. This performance was presented in turn with the Chinese shadow technique, thus evoking in silhouette form that deity that personifies a hope of free and sacred water. The goddess's hands open the luminescent curtain. The work of flow begins and thus life is created in conjunction with light. A dancing, pure, brave and serene water plays with the forms inside her, she contains everything, she is self-sufficient. Her atoms, crystals and fluid colors of her contemplate her and play with her body. The lonely and generous Goddess, who can be full and valued, transforms into sound, petals and dance.",
+    videoUrl: "https://www.youtube.com/embed/uAShAtQrpdQ",
+    videoTitle: "La Diosa del Agua (Trailer DE)",
     images: [
       "/images/portfolio/motion/La Diosa del Agua/diosa-portfolio-01.webp",
       "/images/portfolio/motion/La Diosa del Agua/diosa-portfolio-02.webp",
@@ -260,7 +254,7 @@ export const projects = [
   {
     id: 8,
     title: "Painting Collection",
-    thumbnail: "/images/thumbnails/Painting_Thumbnail.jpg",
+    thumbnail: "/images/thumbnails/paintings-thumbnail.webp",
     category: "Painting",
     description:
       "A collection of digital and traditional paintings exploring various themes and techniques.",

@@ -169,7 +169,7 @@ export const GalleryNavButton = styled.button`
   position: fixed;
   top: 50vh;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: transparent;
   border: 3px solid ${theme.colors.primary};
   color: ${theme.colors.primary};
   width: 50px;
@@ -408,7 +408,7 @@ export const BackButton = styled(Link)`
   border: 2px solid ${theme.colors.primary};
   color: ${theme.colors.primary};
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
   font-family: ${theme.fonts.primary};
@@ -420,7 +420,6 @@ export const BackButton = styled(Link)`
   &:hover {
     background: ${theme.colors.primary};
     color: white;
-    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
