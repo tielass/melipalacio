@@ -29,7 +29,7 @@ export default function AboutSection() {
           <AboutColumn>
             <AboutImage>
               <Image
-                src="/images/meli-about-image.png"
+                src="/images/meli-about-image.webp"
                 alt="Dancer silhouette projection"
                 fill
                 style={{ objectFit: "cover" }}

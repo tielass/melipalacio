@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Share2 } from "lucide-react";
+import { Share2, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useState, useEffect } from "react";
 import {
   ProjectDetailContainer,
   HeaderImage,
@@ -12,8 +13,10 @@ import {
   VideoIframe,
   VideoTitle,
   VideoShare,
+  GallerySection,
   ImageGrid,
   ImageItem,
+  GalleryNavButton,
   ProjectDetails,
   LeftColumn,
   RightColumn,
@@ -22,13 +25,95 @@ import {
   InfoItem,
   InfoLabel,
   InfoValue,
+  LightboxOverlay,
+  LightboxContainer,
+  LightboxImage,
+  CloseButton,
+  NavigationButton,
+  ImageCounter,
+  BackButton,
 } from "./ProjectDetail.styles";
 
-export default function ProjectDetail({ project }) {
+export default function ProjectDetail({
+  project,
+  projects,
+  currentProjectIndex,
+  onProjectChange,
+}) {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? project.images.length - 1 : prev - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) =>
+      prev === project.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const goToPreviousProject = () => {
+    if (projects && onProjectChange) {
+      const prevIndex =
+        currentProjectIndex === 0
+          ? projects.length - 1
+          : currentProjectIndex - 1;
+      onProjectChange(prevIndex);
+    }
+  };
+
+  const goToNextProject = () => {
+    if (projects && onProjectChange) {
+      const nextIndex =
+        currentProjectIndex === projects.length - 1
+          ? 0
+          : currentProjectIndex + 1;
+      onProjectChange(nextIndex);
+    }
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!lightboxOpen) return;
+
+      switch (e.key) {
+        case "Escape":
+          closeLightbox();
+          break;
+        case "ArrowLeft":
+          goToPrevious();
+          break;
+        case "ArrowRight":
+          goToNext();
+          break;
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxOpen]);
+
   return (
     <ProjectDetailContainer>
-      <HeaderImage />
+      <BackButton href="/portfolio">
+        <ChevronLeft size={20} />
+        back
+      </BackButton>
 
+      <HeaderImage />
       <ProjectTitle>{project.title}</ProjectTitle>
       <ProjectDescription>{project.description}</ProjectDescription>
 
@@ -51,18 +136,76 @@ export default function ProjectDetail({ project }) {
       )}
 
       {project.images && project.images.length > 0 && (
-        <ImageGrid>
-          {project.images.slice(0, 20).map((image, index) => (
-            <ImageItem key={index}>
+        <GallerySection>
+          {projects && onProjectChange && (
+            <GalleryNavButton position="left" onClick={goToPreviousProject}>
+              <ChevronLeft size={24} />
+            </GalleryNavButton>
+          )}
+
+          <ImageGrid>
+            {project.images.slice(0, 20).map((image, index) => (
+              <ImageItem key={index} onClick={() => openLightbox(index)}>
+                <Image
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </ImageItem>
+            ))}
+          </ImageGrid>
+
+          {projects && onProjectChange && (
+            <GalleryNavButton position="right" onClick={goToNextProject}>
+              <ChevronRight size={24} />
+            </GalleryNavButton>
+          )}
+        </GallerySection>
+      )}
+
+      {/* Lightbox */}
+      {lightboxOpen && project.images && (
+        <LightboxOverlay onClick={closeLightbox}>
+          <LightboxContainer onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={closeLightbox}>
+              <X size={24} />
+            </CloseButton>
+
+            <LightboxImage>
               <Image
-                src={image}
-                alt={`${project.title} - Image ${index + 1}`}
+                src={project.images[currentImageIndex]}
+                alt={`${project.title} - Image ${currentImageIndex + 1}`}
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
               />
-            </ImageItem>
-          ))}
-        </ImageGrid>
+            </LightboxImage>
+
+            <NavigationButton
+              position="left"
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrevious();
+              }}
+            >
+              <ChevronLeft size={32} />
+            </NavigationButton>
+
+            <NavigationButton
+              position="right"
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNext();
+              }}
+            >
+              <ChevronRight size={32} />
+            </NavigationButton>
+
+            <ImageCounter>
+              {currentImageIndex + 1} / {project.images.length}
+            </ImageCounter>
+          </LightboxContainer>
+        </LightboxOverlay>
       )}
 
       <ProjectDetails>
