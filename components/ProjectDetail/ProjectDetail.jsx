@@ -312,6 +312,27 @@ export default function ProjectDetail({
               <InfoValue>{project.category}</InfoValue>
             </InfoItem>
           )}
+
+          {project.institution && (
+            <InfoItem>
+              <InfoLabel>Institution</InfoLabel>
+              <InfoValue>{project.institution}</InfoValue>
+            </InfoItem>
+          )}
+
+          {project.supervisor && (
+            <InfoItem>
+              <InfoLabel>Supervisor</InfoLabel>
+              <InfoValue>{project.supervisor}</InfoValue>
+            </InfoItem>
+          )}
+
+          {project.photographer && (
+            <InfoItem>
+              <InfoLabel>Photographer</InfoLabel>
+              <InfoValue>{project.photographer}</InfoValue>
+            </InfoItem>
+          )}
         </RightColumn>
       </ProjectDetails>
     </ProjectDetailContainer>

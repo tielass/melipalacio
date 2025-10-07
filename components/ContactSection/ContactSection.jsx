@@ -28,9 +28,9 @@ export default function ContactSection() {
         </BodyText>
         <ServiceTags>
           <ServiceTag>Motion Graphics</ServiceTag>
-          <ServiceTag>Motion Graphics</ServiceTag>
-          <ServiceTag>Motion Graphics</ServiceTag>
-          <ServiceTag>Motion Graphics</ServiceTag>
+          <ServiceTag>Animation</ServiceTag>
+          <ServiceTag>Storyboard & Storytelling</ServiceTag>
+          <ServiceTag>Visual Design</ServiceTag>
         </ServiceTags>
       </ContactHeader>
 

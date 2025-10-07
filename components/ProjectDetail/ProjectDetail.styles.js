@@ -399,7 +399,7 @@ export const ImageCounter = styled.div`
 export const BackButton = styled(Link)`
   position: absolute;
   top: calc(300px + 2rem);
-  left: calc(50% - 600px + 2rem);
+  left: calc(50% - 600px + 1rem);
   display: flex;
   align-items: center;
   gap: 0.5rem;

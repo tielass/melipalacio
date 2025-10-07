@@ -17,9 +17,9 @@ import { SectionTitle, SectionDescription } from "../../styles/Typography";
 
 const categories = [
   "All",
-  "Motion Design & Animation",
-  "Dance Performance",
   "Science & Art",
+  "Motion Design & Animation",
+  "Dance & Performance",
   "Painting",
 ];
 
@@ -31,7 +31,11 @@ export default function PortfolioSection() {
     if (activeCategory === "All") {
       return true;
     }
-    return project.category === activeCategory;
+    // Split categories by comma and trim whitespace, then check if the active category is included
+    const projectCategories = project.category
+      .split(",")
+      .map((cat) => cat.trim());
+    return projectCategories.includes(activeCategory);
   });
 
   return (

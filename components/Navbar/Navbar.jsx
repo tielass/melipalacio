@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Linkedin, Instagram, Facebook, Heart } from "lucide-react";
+import { FaLinkedin, FaInstagramSquare, FaPinterest } from "react-icons/fa";
 import {
   NavbarContainer,
   NavbarContent,
@@ -73,17 +73,20 @@ export default function Navbar() {
           <NavLink href="/contact">Contact</NavLink>
         </NavLinks>
         <SocialIcons>
-          <SocialIcon href="#" aria-label="Facebook">
-            <Facebook size={20} />
+          <SocialIcon
+            href="https://www.linkedin.com/in/melisa-palacio/"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={20} />
           </SocialIcon>
-          <SocialIcon href="#" aria-label="LinkedIn">
-            <Linkedin size={20} />
+          <SocialIcon
+            href="https://www.instagram.com/meli_palacio/ "
+            aria-label="Instagram"
+          >
+            <FaInstagramSquare size={20} />
           </SocialIcon>
-          <SocialIcon href="#" aria-label="Instagram">
-            <Instagram size={20} />
-          </SocialIcon>
-          <SocialIcon href="#" aria-label="Pinterest">
-            <Heart size={20} />
+          <SocialIcon href="https://de.pinterest.com/melixisp/_saved/" aria-label="Pinterest">
+            <FaPinterest size={20} />
           </SocialIcon>
         </SocialIcons>
       </NavbarContent>

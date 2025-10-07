@@ -21,7 +21,9 @@ export default function AboutSection() {
     <AboutContainer>
       <AboutHeader>
         <SectionTitle>About</SectionTitle>
-        <SectionDescription>A glimpse into who I am and what inspires me.</SectionDescription>
+        <SectionDescription>
+          A glimpse into who I am and what inspires me.
+        </SectionDescription>
       </AboutHeader>
 
       <AboutContent>
@@ -40,13 +42,10 @@ export default function AboutSection() {
             <AboutText>
               <SectionTitle>Who am I?</SectionTitle>
               <BodyText>
-                I'm a motion designer, illustrator, and dancer who loves
-                bringing ideas to life through movement and visuals. Whether
-                it's designing animations, creating illustrations, or
-                performing, I'm always exploring new ways to tell stories. My
-                work is inspired by rhythm, energy, and the beauty of expression
-                in different forms. I enjoy blending creativity with technique
-                to make things that connect with people.
+                I’m a motion designer, illustrator, and dancer with a background
+                in Physics Engineering and Media Art & Design. My work bridges
+                science, art, and movement, turning complex ideas into
+                expressive visual stories.
               </BodyText>
             </AboutText>
           </AboutColumn>
@@ -57,13 +56,18 @@ export default function AboutSection() {
             <AboutText>
               <SectionTitle>Who am I?</SectionTitle>
               <BodyText>
-                I'm a motion designer, illustrator, and dancer who loves
-                bringing ideas to life through movement and visuals. Whether
-                it's designing animations, creating illustrations, or
-                performing, I'm always exploring new ways to tell stories. My
-                work is inspired by rhythm, energy, and the beauty of expression
-                in different forms. I enjoy blending creativity with technique
-                to make things that connect with people.
+                After studying Plastic Arts and earning a B.Sc. in Physics
+                Engineering from the Universidad Nacional de Colombia, I
+                completed an MFA in Media Art and Design at the
+                Bauhaus-Universität Weimar. There, I focused on animation,
+                video, illustration, choreography, and stage design, exploring
+                how creativity and knowledge can merge. My MFA project, Black
+                Body Radiation — a multimedia performance inspired by Max
+                Planck’s experiments on light — received Summa Cum Laude, the
+                Bauhaus Graduation Scholarship, and a nomination for the Media
+                Art Award 2016. I’ve collaborated with several companies in
+                Colombia and Germany as an art director, media designer,
+                animator and motion designer.
               </BodyText>
             </AboutText>
           </AboutColumn>

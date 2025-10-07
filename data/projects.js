@@ -233,22 +233,14 @@ export const projects = [
     title: "Soap Bubbles",
     thumbnail: "/images/thumbnails/Bubbles_Thumbnail.jpg",
     category: "Science & Art",
-    description:
-      "A scientific and artistic exploration of soap bubble physics and aesthetics.",
-    client: "Science & Art Project",
-    role: "Scientific visualization, artistic interpretation",
-    animationTechniques: "Macro photography with scientific accuracy",
-    software: "Adobe Photoshop, Scientific Photography",
-    team: "Melisa Palacio",
+    description: "Phenomenological analysis in thin films of soap bubbles",
     concept:
       "This project combines scientific observation with artistic expression, capturing the beauty and complexity of soap bubbles through macro photography and visual analysis.",
     content:
-      "The work explores the physics of surface tension, light refraction, and the mathematical beauty found in natural phenomena, presenting science through an artistic lens.",
-    interestingLinks: [
-      "Scientific Photography",
-      "Physics of Bubbles",
-      "Art and Science Intersection",
-    ],
+      "For my Physics Engineering degree, I explored soap bubbles as the subject of my thesis — a perfect fusion of science and visual art. The project combined graphical illustration, mathematical modeling, and experimental analysis to study the geometric, mechanical, physicochemical, hydrodynamic, and optical properties of soap bubble surfaces.\nHigh-quality photographs and videos, created with professional precision, revealed intricate behaviors of color, gravity, and turbulence, one of which won First Prize at the SPIE Congress (San Diego, 2008).\nThe research was advised by Professor Román Castañeda (Optics Research Group, National University of Colombia) and collaborated with visual artist Santiago Betancur, merging scientific inquiry with artistic expression to communicate science through interactive media.",
+    institution: "Universidad Nacional de Colombia, 2008",
+    supervisor: "Dr. rer. nat. Román Castañeda",
+    photographer: "Santiago Betancur",
     images: ["/images/portfolio/science-and-art/soap-bubble/seifenblasen.webp"],
   },
   {
