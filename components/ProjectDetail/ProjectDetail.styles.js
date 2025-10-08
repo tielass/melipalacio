@@ -204,6 +204,131 @@ export const GalleryNavButton = styled.button`
   }
 `;
 
+export const ProjectNavContainer = styled.div`
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 100;
+  ${(props) => (props.position === "left" ? "left: 1rem;" : "right: 1rem;")}
+
+  @media (max-width: 768px) {
+    ${(props) =>
+      props.position === "left" ? "left: 0.5rem;" : "right: 0.5rem;"}
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    ${(props) =>
+      props.position === "left" ? "left: 0.25rem;" : "right: 0.25rem;"}
+    gap: 0.4rem;
+  }
+`;
+
+export const ProjectNavButton = styled.button`
+  background: transparent;
+  border: 3px solid ${theme.colors.primary};
+  color: ${theme.colors.primary};
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: ${theme.colors.primary};
+    color: white;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+  }
+`;
+
+export const ProjectNavInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: ${(props) =>
+    props.position === "left" ? "flex-start" : "flex-end"};
+  max-width: 120px;
+  opacity: 0;
+  transform: translateX(
+    ${(props) => (props.position === "left" ? "-10px" : "10px")}
+  );
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+  ${ProjectNavContainer}:hover & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 80px;
+  }
+`;
+
+export const ProjectNavThumbnail = styled.div`
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  margin-bottom: 0.25rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (max-width: 480px) {
+    width: 28px;
+    height: 28px;
+  }
+`;
+
+export const ProjectNavTitle = styled.div`
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: ${theme.colors.primary};
+  text-align: ${(props) => (props.position === "left" ? "left" : "right")};
+  line-height: 1.2;
+  font-family: ${theme.fonts.primary};
+  word-wrap: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.65rem;
+  }
+`;
+
 export const ProjectDetails = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

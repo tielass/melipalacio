@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import { FaLinkedin, FaInstagramSquare, FaPinterest } from "react-icons/fa";
 import {
   NavbarContainer,
   NavbarContent,
   NavbarBackground,
+  NavbarScrolledBackground,
   Logo,
   NavLinks,
   NavLink,
@@ -16,12 +18,24 @@ import {
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
   const isAboutPage = pathname === "/about";
   const isContactPage = pathname === "/contact";
   const isPortfolioPage = pathname === "/portfolio";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <NavbarContainer>
+    <NavbarContainer isScrolled={isScrolled}>
+      {isScrolled && <NavbarScrolledBackground />}
       {isAboutPage && (
         <NavbarBackground>
           <Image
@@ -55,37 +69,49 @@ export default function Navbar() {
           />
         </NavbarBackground>
       )}
-      <NavbarContent>
-        <Logo>
+      <NavbarContent isScrolled={isScrolled}>
+        <Logo isScrolled={isScrolled}>
           <Link href="/">
             <Image
               src="/icons/Logo.svg"
               alt="Meli Palacio Logo"
-              width={60}
-              height={60}
+              width={isScrolled ? 45 : 60}
+              height={isScrolled ? 45 : 60}
               priority
             />
           </Link>
         </Logo>
-        <NavLinks>
-          <NavLink href="/portfolio">Portfolio</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+        <NavLinks isScrolled={isScrolled}>
+          <NavLink href="/portfolio" isScrolled={isScrolled}>
+            Portfolio
+          </NavLink>
+          <NavLink href="/about" isScrolled={isScrolled}>
+            About
+          </NavLink>
+          <NavLink href="/contact" isScrolled={isScrolled}>
+            Contact
+          </NavLink>
         </NavLinks>
-        <SocialIcons>
+        <SocialIcons isScrolled={isScrolled}>
           <SocialIcon
             href="https://www.linkedin.com/in/melisa-palacio/"
             aria-label="LinkedIn"
+            isScrolled={isScrolled}
           >
             <FaLinkedin size={20} />
           </SocialIcon>
           <SocialIcon
             href="https://www.instagram.com/meli_palacio/ "
             aria-label="Instagram"
+            isScrolled={isScrolled}
           >
             <FaInstagramSquare size={20} />
           </SocialIcon>
-          <SocialIcon href="https://de.pinterest.com/melixisp/_saved/" aria-label="Pinterest">
+          <SocialIcon
+            href="https://de.pinterest.com/melixisp/_saved/"
+            aria-label="Pinterest"
+            isScrolled={isScrolled}
+          >
             <FaPinterest size={20} />
           </SocialIcon>
         </SocialIcons>

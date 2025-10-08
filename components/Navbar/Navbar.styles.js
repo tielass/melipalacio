@@ -9,26 +9,44 @@ export const NavbarContainer = styled.nav`
   z-index: 1000;
   background: transparent;
   transition: all 0.3s ease;
-  min-height: 200px;
+  min-height: ${(props) => (props.isScrolled ? "80px" : "200px")};
 
   @media (max-width: 768px) {
-    min-height: 100px;
+    min-height: ${(props) => (props.isScrolled ? "60px" : "100px")};
+  }
+`;
+
+export const NavbarScrolledBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(128, 128, 128, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: -1;
+
+  @media (max-width: 768px) {
   }
 `;
 
 export const NavbarContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 4rem;
+  padding: ${(props) => (props.isScrolled ? "1rem 4rem" : "2rem 4rem")};
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
 
   @media (max-width: 768px) {
-    padding: 1.5rem 2rem;
+    padding: ${(props) => (props.isScrolled ? "0.75rem 2rem" : "1.5rem 2rem")};
     flex-direction: column;
-    gap: 1rem;
+    gap: ${(props) => (props.isScrolled ? "0.5rem" : "1rem")};
   }
 `;
 
@@ -102,6 +120,8 @@ export const NavLink = styled(Link)`
   font-size: 1rem;
   letter-spacing: 1px;
   transition: all 0.3s ease;
+  text-shadow: ${(props) =>
+    props.isScrolled ? "none" : "0 1px 3px rgba(0, 0, 0, 0.5)"};
 
   &:hover {
     opacity: 0.8;
@@ -128,6 +148,8 @@ export const SocialIcon = styled.a`
   justify-content: center;
   width: 24px;
   height: 24px;
+  filter: ${(props) =>
+    props.isScrolled ? "none" : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))"};
 
   &:hover {
     opacity: 0.8;

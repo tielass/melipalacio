@@ -17,6 +17,11 @@ import {
   ImageGrid,
   ImageItem,
   GalleryNavButton,
+  ProjectNavContainer,
+  ProjectNavButton,
+  ProjectNavInfo,
+  ProjectNavThumbnail,
+  ProjectNavTitle,
   ProjectDetails,
   LeftColumn,
   RightColumn,
@@ -138,9 +143,48 @@ export default function ProjectDetail({
       {project.images && project.images.length > 0 && (
         <GallerySection>
           {projects && onProjectChange && (
-            <GalleryNavButton position="left" onClick={goToPreviousProject}>
-              <ChevronLeft size={24} />
-            </GalleryNavButton>
+            <ProjectNavContainer position="left">
+              <ProjectNavButton onClick={goToPreviousProject}>
+                <ChevronLeft size={24} />
+              </ProjectNavButton>
+              <ProjectNavInfo position="left">
+                <ProjectNavThumbnail>
+                  <Image
+                    src={
+                      projects[
+                        currentProjectIndex === 0
+                          ? projects.length - 1
+                          : currentProjectIndex - 1
+                      ].thumbnail ||
+                      projects[
+                        currentProjectIndex === 0
+                          ? projects.length - 1
+                          : currentProjectIndex - 1
+                      ].images[0]
+                    }
+                    alt={
+                      projects[
+                        currentProjectIndex === 0
+                          ? projects.length - 1
+                          : currentProjectIndex - 1
+                      ].title
+                    }
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "cover" }}
+                  />
+                </ProjectNavThumbnail>
+                <ProjectNavTitle position="left">
+                  {
+                    projects[
+                      currentProjectIndex === 0
+                        ? projects.length - 1
+                        : currentProjectIndex - 1
+                    ].title
+                  }
+                </ProjectNavTitle>
+              </ProjectNavInfo>
+            </ProjectNavContainer>
           )}
 
           <ImageGrid>
@@ -157,9 +201,48 @@ export default function ProjectDetail({
           </ImageGrid>
 
           {projects && onProjectChange && (
-            <GalleryNavButton position="right" onClick={goToNextProject}>
-              <ChevronRight size={24} />
-            </GalleryNavButton>
+            <ProjectNavContainer position="right">
+              <ProjectNavInfo position="right">
+                <ProjectNavThumbnail>
+                  <Image
+                    src={
+                      projects[
+                        currentProjectIndex === projects.length - 1
+                          ? 0
+                          : currentProjectIndex + 1
+                      ].thumbnail ||
+                      projects[
+                        currentProjectIndex === projects.length - 1
+                          ? 0
+                          : currentProjectIndex + 1
+                      ].images[0]
+                    }
+                    alt={
+                      projects[
+                        currentProjectIndex === projects.length - 1
+                          ? 0
+                          : currentProjectIndex + 1
+                      ].title
+                    }
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "cover" }}
+                  />
+                </ProjectNavThumbnail>
+                <ProjectNavTitle position="right">
+                  {
+                    projects[
+                      currentProjectIndex === projects.length - 1
+                        ? 0
+                        : currentProjectIndex + 1
+                    ].title
+                  }
+                </ProjectNavTitle>
+              </ProjectNavInfo>
+              <ProjectNavButton onClick={goToNextProject}>
+                <ChevronRight size={24} />
+              </ProjectNavButton>
+            </ProjectNavContainer>
           )}
         </GallerySection>
       )}
