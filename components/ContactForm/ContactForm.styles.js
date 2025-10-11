@@ -89,11 +89,6 @@ export const SubmitButton = styled.button`
   margin-top: 1rem;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(173, 80, 255, 0.3);
-  }
-
-  &:active {
-    transform: translateY(0);
+    background: ${theme.colors.backgroundDark};
   }
 `;

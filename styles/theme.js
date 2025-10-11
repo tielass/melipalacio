@@ -4,6 +4,7 @@ export const theme = {
         secondary: '#030335', // Dark 
         tertiary: '#EFDCFF', // light pink
         background: '#E7E6EE',
+        backgroundDark: '#0D0D33', // Footer dark
         text: '#0B0751',
         white: '#FFFFFF',
         gray: {

@@ -1,5 +1,6 @@
 "use client";
-import { Linkedin, Facebook, Mail, Phone, Heart, Twitter } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import { FaLinkedin, FaInstagramSquare, FaPinterest } from "react-icons/fa";
 import {
   FooterContainer,
   FooterColumns,
@@ -43,17 +44,23 @@ export default function Footer() {
             </ContactItem>
           </ContactInfo>
           <SocialIcons>
-            <SocialIcon href="#" aria-label="Facebook">
-              <Facebook size={20} />
+            <SocialIcon
+              href="https://www.linkedin.com/in/melisa-palacio/"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={20} />
             </SocialIcon>
-            <SocialIcon href="#" aria-label="LinkedIn">
-              <Linkedin size={20} />
+            <SocialIcon
+              href="https://www.instagram.com/meli_palacio/"
+              aria-label="Instagram"
+            >
+              <FaInstagramSquare size={20} />
             </SocialIcon>
-            <SocialIcon href="#" aria-label="X (Twitter)">
-              <Twitter size={20} />
-            </SocialIcon>
-            <SocialIcon href="#" aria-label="Pinterest">
-              <Heart size={20} />
+            <SocialIcon
+              href="https://de.pinterest.com/melixisp/_saved/"
+              aria-label="Pinterest"
+            >
+              <FaPinterest size={20} />
             </SocialIcon>
           </SocialIcons>
         </FooterSection>

@@ -96,21 +96,33 @@ export default function Navbar() {
           <SocialIcon
             href="https://www.linkedin.com/in/melisa-palacio/"
             aria-label="LinkedIn"
-            isScrolled={isScrolled}
+            style={{
+              filter: isScrolled
+                ? "none"
+                : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
+            }}
           >
             <FaLinkedin size={20} />
           </SocialIcon>
           <SocialIcon
             href="https://www.instagram.com/meli_palacio/ "
             aria-label="Instagram"
-            isScrolled={isScrolled}
+            style={{
+              filter: isScrolled
+                ? "none"
+                : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
+            }}
           >
             <FaInstagramSquare size={20} />
           </SocialIcon>
           <SocialIcon
             href="https://de.pinterest.com/melixisp/_saved/"
             aria-label="Pinterest"
-            isScrolled={isScrolled}
+            style={{
+              filter: isScrolled
+                ? "none"
+                : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
+            }}
           >
             <FaPinterest size={20} />
           </SocialIcon>

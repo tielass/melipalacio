@@ -70,10 +70,6 @@ export const GlobalStyles = () => (
         transition: all 0.3s ease;
       }
 
-      a:hover {
-        opacity: 0.8;
-      }
-
       button {
         border: none;
         background: none;

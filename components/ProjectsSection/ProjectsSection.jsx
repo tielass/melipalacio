@@ -17,8 +17,10 @@ import {
   ShowreelSectionDescription,
   CardTitle,
 } from "../../styles/Typography";
+import { useRouter } from "next/navigation";
 
 export default function ProjectsSection() {
+  const router = useRouter();
   return (
     <ProjectsContainer>
       <ShowreelSectionTitle>Projects</ShowreelSectionTitle>
@@ -28,7 +30,11 @@ export default function ProjectsSection() {
 
       <ProjectsGrid>
         {projects.slice(0, 9).map((project) => (
-          <ProjectCardWithHover key={project.id}>
+          <ProjectCardWithHover
+            key={project.id}
+            onClick={() => router.push(`/portfolio/${project.id}`)}
+            style={{ cursor: "pointer" }}
+          >
             <ProjectImage>
               <ProjectImageInner className="project-image-inner">
                 <Image
@@ -54,7 +60,9 @@ export default function ProjectsSection() {
         ))}
       </ProjectsGrid>
 
-      <ViewAllButton>View All Projects</ViewAllButton>
+      <ViewAllButton onClick={() => router.push("/portfolio")}>
+        View All Projects
+      </ViewAllButton>
     </ProjectsContainer>
   );
 }

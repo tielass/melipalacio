@@ -523,17 +523,17 @@ export const ImageCounter = styled.div`
 
 export const BackButton = styled(Link)`
   position: absolute;
-  top: calc(300px + 2rem);
+  top: calc(300px + 2.2rem);
   left: calc(50% - 600px + 1rem);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid ${theme.colors.primary};
-  color: ${theme.colors.primary};
+  background: ${theme.colors.primary};
+  color: ${theme.colors.white};
   text-decoration: none;
-  border-radius: 12px;
+  border: none;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   font-family: ${theme.fonts.primary};
@@ -543,9 +543,7 @@ export const BackButton = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    background: ${theme.colors.primary};
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: ${theme.colors.backgroundDark};
   }
 
   @media (max-width: 1200px) {

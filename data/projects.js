@@ -22,7 +22,7 @@ export const projects = [
       "Planetarium Hamburg",
       "360° Fulldome Experience",
     ],
-    videoUrl: "https://www.youtube.com/embed/example-video-id",
+    videoUrl: "https://www.youtube.com/embed/nMMH1J9sXZs",
     videoTitle: "Die drei ??? und die singende Schlange (Trailer DE)",
     images: [
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-01.webp",
@@ -259,11 +259,6 @@ export const projects = [
       "This collection showcases a range of painting styles and techniques, from traditional canvas work to digital painting, exploring themes of nature, abstraction, and human emotion.",
     content:
       "Each piece in the collection represents a different exploration of color, form, and technique, demonstrating versatility and artistic growth across different media.",
-    interestingLinks: [
-      "Digital Painting",
-      "Traditional Art Techniques",
-      "Contemporary Painting",
-    ],
     images: [
       "/images/portfolio/painting/Painting_04.png",
       "/images/portfolio/painting/Painting_06.png",

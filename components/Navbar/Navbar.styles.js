@@ -114,7 +114,9 @@ export const NavLinks = styled.div`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== "isScrolled",
+})`
   color: white;
   font-weight: 500;
   font-size: 1rem;
@@ -148,8 +150,6 @@ export const SocialIcon = styled.a`
   justify-content: center;
   width: 24px;
   height: 24px;
-  filter: ${(props) =>
-    props.isScrolled ? "none" : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))"};
 
   &:hover {
     opacity: 0.8;

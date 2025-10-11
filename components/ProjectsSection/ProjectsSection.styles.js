@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { theme } from "../../styles/theme";
 
 export const ProjectsContainer = styled.section`
   padding: 6rem 4rem;
@@ -105,23 +106,20 @@ export const ProjectCardWithHover = styled(ProjectCard)`
 // ProjectTitle moved to Typography.js as CardTitle
 
 export const ViewAllButton = styled.button`
-  margin-top: 4rem;
-  padding: 1rem 3rem;
-  background-color: #8b5cf6;
-  color: white;
+  background: ${theme.colors.primary};
+  color: ${theme.colors.white};
   border: none;
-  border-radius: 50px;
+  padding: 1rem 3rem;
+  border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-self: center;
+  margin-top: 1rem;
 
   &:hover {
-    background-color: #7c3aed;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+    background: ${theme.colors.backgroundDark};
   }
 
   @media (max-width: 768px) {
