@@ -54,7 +54,7 @@ export default function AboutSection() {
         <AboutRow>
           <AboutColumn>
             <AboutText>
-              <SectionTitle>Who am I?</SectionTitle>
+              <SectionTitle>What do I do?</SectionTitle>
               <BodyText>
                 After studying Plastic Arts and earning a B.Sc. in Physics
                 Engineering from the Universidad Nacional de Colombia, I

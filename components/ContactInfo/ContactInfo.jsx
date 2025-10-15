@@ -44,9 +44,7 @@ export default function ContactInfo() {
           </InfoIcon>
           <InfoTitle>Current Status</InfoTitle>
         </InfoItemContainer>
-        <InfoDescription>
-          Available for new projects starting February 2025. Booking for Q2.
-        </InfoDescription>
+        <InfoDescription>Available for new projects.</InfoDescription>
       </InfoItem>
 
       <InfoItem>
@@ -63,8 +61,8 @@ export default function ContactInfo() {
           <InfoTitle>Time Zone</InfoTitle>
         </InfoItemContainer>
         <InfoDescription>
-          PST (UTC-8). Flexible with international clients. Remote collaboration
-          worldwide.
+          Berlin time zone (CET/CEST). Flexible with international clients.
+          Remote collaboration worldwide.
         </InfoDescription>
       </InfoItem>
     </InfoContainer>

@@ -8,7 +8,7 @@ export const PartnersContainer = styled.section`
 
 export const PartnersHeader = styled.div`
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -22,7 +22,7 @@ export const PartnersGrid = styled.div`
   grid-template-columns: repeat(5, 1fr);
   gap: 3rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
   padding: 0 2rem;
   align-items: center;
   justify-items: center;

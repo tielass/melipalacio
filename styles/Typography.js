@@ -35,13 +35,13 @@ export const SectionDescription = styled.p`
 
 // Universal Body Text (regular paragraph text)
 export const BodyText = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.4;
   color: ${theme.colors.secondary};
   margin: 0;
   font-family: ${theme.fonts.primary};
-  text-align: center;
+  text-align: justify;
   max-width: 1200px;
 `;
 
