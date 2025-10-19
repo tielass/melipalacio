@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
+import { theme } from "../../styles/theme";
 
 export const HeroContainer = styled.section`
   position: relative;
@@ -25,8 +26,15 @@ export const BackgroundImage = styled.div`
     object-position: center;
   }
 
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -38,6 +46,7 @@ export const BackgroundImage = styled.div`
       rgba(0, 0, 0, 0.1) 50%,
       rgba(0, 0, 0, 0.4) 100%
     );
+    z-index: 1;
   }
 `;
 
@@ -62,7 +71,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const TextContent = styled.div`
-  color: white;
+  color: ${theme.colors.secondary};
   max-width: 500px;
 
   @media (max-width: 768px) {
@@ -88,14 +97,14 @@ export const NavigationArrow = styled.div`
   right: 2rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #8B5CF6;
+  color: #8b5cf6;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 3;
 
   &:hover {
     transform: translateY(-50%) translateX(4px);
-    color: #7C3AED;
+    color: #7c3aed;
   }
 
   @media (max-width: 768px) {

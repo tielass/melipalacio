@@ -1,6 +1,5 @@
 "use client";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 import {
   HeroContainer,
   BackgroundImage,
@@ -14,13 +13,24 @@ export default function HeroSection() {
   return (
     <HeroContainer>
       <BackgroundImage>
-        <Image
-          src="/images/LandingPageBanner.webp"
-          alt="Dancer in silhouette with flowing fabric"
-          fill
-          priority
-          style={{ objectFit: "cover" }}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            zIndex: -1,
+          }}
+        >
+          <source src="/videos/Header_Animation_02.mp4" type="video/mp4" />
+        </video>
       </BackgroundImage>
 
       <ContentContainer>
