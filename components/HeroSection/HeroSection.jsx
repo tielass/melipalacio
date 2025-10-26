@@ -29,7 +29,7 @@ export default function HeroSection() {
             zIndex: -1,
           }}
         >
-          <source src="/videos/Header_Animation_02.mp4" type="video/mp4" />
+          <source src="/videos/Header-Animation.webm" type="video/mp4" />
         </video>
       </BackgroundImage>
 

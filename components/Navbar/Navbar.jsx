@@ -19,20 +19,12 @@ import {
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showLogoAnimation, setShowLogoAnimation] = useState(true);
-  const [isClient, setIsClient] = useState(false);
   const isAboutPage = pathname === "/about";
   const isContactPage = pathname === "/contact";
   const isPortfolioPage = pathname === "/portfolio";
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
-    // Set client-side flag and check if animation should play
-    setIsClient(true);
-    const hasPlayedAnimation = sessionStorage.getItem("logoAnimationPlayed");
-    if (hasPlayedAnimation) {
-      setShowLogoAnimation(false);
-    }
-
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
@@ -42,16 +34,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle logo animation completion
-  const handleLogoAnimationEnd = () => {
-    setShowLogoAnimation(false);
-    // Mark animation as played in this session
-    sessionStorage.setItem("logoAnimationPlayed", "true");
-  };
-
   return (
-    <NavbarContainer isScrolled={isScrolled}>
-      {isScrolled && <NavbarScrolledBackground />}
+    <NavbarContainer isScrolled={isScrolled} isHomePage={isHomePage}>
+      {(isScrolled || isHomePage) && <NavbarScrolledBackground />}
       {isAboutPage && (
         <NavbarBackground>
           <Image
@@ -85,33 +70,16 @@ export default function Navbar() {
           />
         </NavbarBackground>
       )}
-      <NavbarContent isScrolled={isScrolled}>
+      <NavbarContent isScrolled={isScrolled} isHomePage={isHomePage}>
         <Logo isScrolled={isScrolled}>
           <Link href="/">
-            {isClient && showLogoAnimation ? (
-              <video
-                autoPlay
-                muted
-                playsInline
-                onEnded={handleLogoAnimationEnd}
-                width={isScrolled ? 45 : 60}
-                height={isScrolled ? 45 : 60}
-                style={{
-                  objectFit: "contain",
-                  display: "block",
-                }}
-              >
-                <source src="/videos/Logo Animation_01.mp4" type="video/mp4" />
-              </video>
-            ) : (
-              <Image
-                src="/icons/Logo.svg"
-                alt="Meli Palacio Logo"
-                width={isScrolled ? 45 : 60}
-                height={isScrolled ? 45 : 60}
-                priority
-              />
-            )}
+            <Image
+              src="/icons/Logo.svg"
+              alt="Meli Palacio Logo"
+              width={isScrolled ? 45 : 60}
+              height={isScrolled ? 45 : 60}
+              priority
+            />
           </Link>
         </Logo>
         <NavLinks isScrolled={isScrolled}>

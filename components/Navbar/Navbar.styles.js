@@ -9,10 +9,12 @@ export const NavbarContainer = styled.nav`
   z-index: 1000;
   background: transparent;
   transition: all 0.3s ease;
-  min-height: ${(props) => (props.isScrolled ? "80px" : "200px")};
+  min-height: ${(props) =>
+    props.isHomePage ? "80px" : props.isScrolled ? "80px" : "200px"};
 
   @media (max-width: 768px) {
-    min-height: ${(props) => (props.isScrolled ? "60px" : "100px")};
+    min-height: ${(props) =>
+      props.isHomePage ? "60px" : props.isScrolled ? "60px" : "100px"};
   }
 `;
 
@@ -34,7 +36,12 @@ export const NavbarScrolledBackground = styled.div`
 export const NavbarContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: ${(props) => (props.isScrolled ? "1rem 4rem" : "2rem 4rem")};
+  padding: ${(props) =>
+    props.isHomePage
+      ? "1rem 4rem"
+      : props.isScrolled
+      ? "1rem 4rem"
+      : "2rem 4rem"};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,9 +51,15 @@ export const NavbarContent = styled.div`
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {
-    padding: ${(props) => (props.isScrolled ? "0.75rem 2rem" : "1.5rem 2rem")};
+    padding: ${(props) =>
+      props.isHomePage
+        ? "0.75rem 2rem"
+        : props.isScrolled
+        ? "0.75rem 2rem"
+        : "1.5rem 2rem"};
     flex-direction: column;
-    gap: ${(props) => (props.isScrolled ? "0.5rem" : "1rem")};
+    gap: ${(props) =>
+      props.isHomePage ? "0.5rem" : props.isScrolled ? "0.5rem" : "1rem"};
   }
 `;
 

@@ -52,7 +52,7 @@ export const PartnerLogo = styled.div`
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.5);
     opacity: 0.8;
   }
 
@@ -63,7 +63,8 @@ export const PartnerLogo = styled.div`
     transition: filter 0.3s ease;
 
     &:hover {
-      filter: grayscale(0%);
+      filter: grayscale(0%) sepia(100%) saturate(2000%) hue-rotate(247deg)
+        brightness(0.8) contrast(1.2);
     }
   }
 `;
