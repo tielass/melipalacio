@@ -10,9 +10,7 @@ export default function ScrollToTop() {
     const toggleVisibility = () => {
       // Show button when user scrolls down 80% of the page
       const scrollPercentage =
-        (window.scrollY /
-          (document.documentElement.scrollHeight - window.innerHeight)) *
-        100;
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       setIsVisible(scrollPercentage > 80);
     };
 

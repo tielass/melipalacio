@@ -39,12 +39,7 @@ import {
   BackButton,
 } from "./ProjectDetail.styles";
 
-export default function ProjectDetail({
-  project,
-  projects,
-  currentProjectIndex,
-  onProjectChange,
-}) {
+export default function ProjectDetail({ project, projects, currentProjectIndex, onProjectChange }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -58,33 +53,23 @@ export default function ProjectDetail({
   };
 
   const goToPrevious = () => {
-    setCurrentImageIndex((prev) =>
-      prev === 0 ? project.images.length - 1 : prev - 1
-    );
+    setCurrentImageIndex((prev) => (prev === 0 ? project.images.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentImageIndex((prev) =>
-      prev === project.images.length - 1 ? 0 : prev + 1
-    );
+    setCurrentImageIndex((prev) => (prev === project.images.length - 1 ? 0 : prev + 1));
   };
 
   const goToPreviousProject = () => {
     if (projects && onProjectChange) {
-      const prevIndex =
-        currentProjectIndex === 0
-          ? projects.length - 1
-          : currentProjectIndex - 1;
+      const prevIndex = currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1;
       onProjectChange(prevIndex);
     }
   };
 
   const goToNextProject = () => {
     if (projects && onProjectChange) {
-      const nextIndex =
-        currentProjectIndex === projects.length - 1
-          ? 0
-          : currentProjectIndex + 1;
+      const nextIndex = currentProjectIndex === projects.length - 1 ? 0 : currentProjectIndex + 1;
       onProjectChange(nextIndex);
     }
   };
@@ -152,21 +137,15 @@ export default function ProjectDetail({
                   <Image
                     src={
                       projects[
-                        currentProjectIndex === 0
-                          ? projects.length - 1
-                          : currentProjectIndex - 1
+                        currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1
                       ].thumbnail ||
                       projects[
-                        currentProjectIndex === 0
-                          ? projects.length - 1
-                          : currentProjectIndex - 1
+                        currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1
                       ].images[0]
                     }
                     alt={
                       projects[
-                        currentProjectIndex === 0
-                          ? projects.length - 1
-                          : currentProjectIndex - 1
+                        currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1
                       ].title
                     }
                     width={40}
@@ -177,9 +156,7 @@ export default function ProjectDetail({
                 <ProjectNavTitle position="left">
                   {
                     projects[
-                      currentProjectIndex === 0
-                        ? projects.length - 1
-                        : currentProjectIndex - 1
+                      currentProjectIndex === 0 ? projects.length - 1 : currentProjectIndex - 1
                     ].title
                   }
                 </ProjectNavTitle>
@@ -207,21 +184,15 @@ export default function ProjectDetail({
                   <Image
                     src={
                       projects[
-                        currentProjectIndex === projects.length - 1
-                          ? 0
-                          : currentProjectIndex + 1
+                        currentProjectIndex === projects.length - 1 ? 0 : currentProjectIndex + 1
                       ].thumbnail ||
                       projects[
-                        currentProjectIndex === projects.length - 1
-                          ? 0
-                          : currentProjectIndex + 1
+                        currentProjectIndex === projects.length - 1 ? 0 : currentProjectIndex + 1
                       ].images[0]
                     }
                     alt={
                       projects[
-                        currentProjectIndex === projects.length - 1
-                          ? 0
-                          : currentProjectIndex + 1
+                        currentProjectIndex === projects.length - 1 ? 0 : currentProjectIndex + 1
                       ].title
                     }
                     width={40}
@@ -232,9 +203,7 @@ export default function ProjectDetail({
                 <ProjectNavTitle position="right">
                   {
                     projects[
-                      currentProjectIndex === projects.length - 1
-                        ? 0
-                        : currentProjectIndex + 1
+                      currentProjectIndex === projects.length - 1 ? 0 : currentProjectIndex + 1
                     ].title
                   }
                 </ProjectNavTitle>
@@ -298,21 +267,20 @@ export default function ProjectDetail({
               <SectionTitle>Concept</SectionTitle>
               <SectionContent>
                 <p>{project.concept}</p>
-                {project.interestingLinks &&
-                  project.interestingLinks.length > 0 && (
-                    <div>
-                      {project.interestingLinks.map((link, index) => (
-                        <a
-                          key={index}
-                          href={link.startsWith("http") ? link : "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {link}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                {project.interestingLinks && project.interestingLinks.length > 0 && (
+                  <div>
+                    {project.interestingLinks.map((link, index) => (
+                      <a
+                        key={index}
+                        href={link.startsWith("http") ? link : "#"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </SectionContent>
             </div>
           )}
@@ -322,14 +290,13 @@ export default function ProjectDetail({
               <SectionTitle>Content</SectionTitle>
               <SectionContent>
                 <p>{project.content}</p>
-                {project.interestingLinks &&
-                  project.interestingLinks.length > 0 && (
-                    <div>
-                      <p>
-                        <strong>Source: {project.title}</strong>
-                      </p>
-                    </div>
-                  )}
+                {project.interestingLinks && project.interestingLinks.length > 0 && (
+                  <div>
+                    <p>
+                      <strong>Source: {project.title}</strong>
+                    </p>
+                  </div>
+                )}
               </SectionContent>
             </div>
           )}

@@ -44,22 +44,13 @@ export default function Footer() {
             </ContactItem>
           </ContactInfo>
           <SocialIcons>
-            <SocialIcon
-              href="https://www.linkedin.com/in/melisa-palacio/"
-              aria-label="LinkedIn"
-            >
+            <SocialIcon href="https://www.linkedin.com/in/melisa-palacio/" aria-label="LinkedIn">
               <FaLinkedin size={20} />
             </SocialIcon>
-            <SocialIcon
-              href="https://www.instagram.com/meli_palacio/"
-              aria-label="Instagram"
-            >
+            <SocialIcon href="https://www.instagram.com/meli_palacio/" aria-label="Instagram">
               <FaInstagramSquare size={20} />
             </SocialIcon>
-            <SocialIcon
-              href="https://de.pinterest.com/melixisp/_saved/"
-              aria-label="Pinterest"
-            >
+            <SocialIcon href="https://de.pinterest.com/melixisp/_saved/" aria-label="Pinterest">
               <FaPinterest size={20} />
             </SocialIcon>
           </SocialIcons>

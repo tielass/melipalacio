@@ -26,8 +26,7 @@ export default function ContactInfo() {
           <InfoTitle>Response Time</InfoTitle>
         </InfoItemContainer>
         <InfoDescription>
-          Usually respond within 4-6 hours during business days. Weekend
-          responses within 24 hours.
+          Usually respond within 4-6 hours during business days. Weekend responses within 24 hours.
         </InfoDescription>
       </InfoItem>
 
@@ -61,8 +60,8 @@ export default function ContactInfo() {
           <InfoTitle>Time Zone</InfoTitle>
         </InfoItemContainer>
         <InfoDescription>
-          Berlin time zone (CET/CEST). Flexible with international clients.
-          Remote collaboration worldwide.
+          Berlin time zone (CET/CEST). Flexible with international clients. Remote collaboration
+          worldwide.
         </InfoDescription>
       </InfoItem>
     </InfoContainer>

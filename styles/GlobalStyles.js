@@ -1,4 +1,4 @@
-import { Global, css } from '@emotion/react';
+import { Global, css } from "@emotion/react";
 
 export const GlobalStyles = () => (
   <Global
@@ -15,47 +15,54 @@ export const GlobalStyles = () => (
       }
 
       @font-face {
-        font-family: 'Syne';
-        src: url('/fonts/Syne-Regular.ttf') format('truetype');
+        font-family: "Syne";
+        src: url("/fonts/Syne-Regular.ttf") format("truetype");
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
 
       @font-face {
-        font-family: 'Syne';
-        src: url('/fonts/Syne-Medium.ttf') format('truetype');
+        font-family: "Syne";
+        src: url("/fonts/Syne-Medium.ttf") format("truetype");
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
 
       @font-face {
-        font-family: 'Syne';
-        src: url('/fonts/Syne-SemiBold.ttf') format('truetype');
+        font-family: "Syne";
+        src: url("/fonts/Syne-SemiBold.ttf") format("truetype");
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
 
       @font-face {
-        font-family: 'Syne';
-        src: url('/fonts/Syne-Bold.ttf') format('truetype');
+        font-family: "Syne";
+        src: url("/fonts/Syne-Bold.ttf") format("truetype");
         font-weight: 700;
         font-style: normal;
         font-display: swap;
       }
 
       @font-face {
-        font-family: 'Syne';
-        src: url('/fonts/Syne-ExtraBold.ttf') format('truetype');
+        font-family: "Syne";
+        src: url("/fonts/Syne-ExtraBold.ttf") format("truetype");
         font-weight: 800;
         font-style: normal;
         font-display: swap;
       }
 
       body {
-        font-family: 'Syne', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family:
+          "Syne",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
         line-height: 1.6;
         color: #000000;
         background-color: #ffffff;
@@ -83,11 +90,17 @@ export const GlobalStyles = () => (
         display: block;
       }
 
-      ul, ol {
+      ul,
+      ol {
         list-style: none;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-weight: 600;
         line-height: 1.2;
       }
@@ -102,12 +115,12 @@ export const GlobalStyles = () => (
       }
 
       ::-webkit-scrollbar-thumb {
-        background: #8B5CF6;
+        background: #8b5cf6;
         border-radius: 4px;
       }
 
       ::-webkit-scrollbar-thumb:hover {
-        background: #7C3AED;
+        background: #7c3aed;
       }
     `}
   />

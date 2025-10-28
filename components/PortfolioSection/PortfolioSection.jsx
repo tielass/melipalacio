@@ -32,9 +32,7 @@ export default function PortfolioSection() {
       return true;
     }
     // Split categories by comma and trim whitespace, then check if the active category is included
-    const projectCategories = project.category
-      .split(",")
-      .map((cat) => cat.trim());
+    const projectCategories = project.category.split(",").map((cat) => cat.trim());
     return projectCategories.includes(activeCategory);
   });
 

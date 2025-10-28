@@ -8,6 +8,7 @@ export const PortfolioContainer = styled.section`
   align-items: center;
 
   @media (max-width: 768px) {
+    margin-top: 5rem;
     padding: 4rem 2rem 2rem;
   }
 `;

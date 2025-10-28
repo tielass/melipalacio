@@ -8,8 +8,7 @@ export const projects = [
       "Art Direction for a production of Sony Music Entertainment, Germany and HO3RRAUM Media. Look- and layout development, illustration and animation",
     client: "Sony Music Entertainment, Europe and HO3RRAUM Media. 2020",
     role: "Art Direction, look concept, illustration and animation",
-    animationTechniques:
-      "360° Fulldome-Visualisations for a 3D audio play in Spatial Sound",
+    animationTechniques: "360° Fulldome-Visualisations for a 3D audio play in Spatial Sound",
     software: "Adobe Illustrator, Adobe After Effects",
     team: "Melisa Palacio & Claire Dorweiler",
     concept:
@@ -50,8 +49,7 @@ export const projects = [
       "Art Direction for a production of Sony Music Entertainment, Europe and H03RRAUM Media. Look- and layout development, illustration and animation.",
     client: "Sony Music Entertainment, Europe and H03RRAUM Media. 2017",
     role: "Art Direction, look concept, illustration and animation",
-    animationTechniques:
-      "360° Fulldome-Visualisations for a 3D audio play in Spatial Sound",
+    animationTechniques: "360° Fulldome-Visualisations for a 3D audio play in Spatial Sound",
     software: "Adobe Illustrator, Adobe After Effects",
     team: "Melisa Palacio & Claire Dorweiler",
     concept:
@@ -112,8 +110,7 @@ export const projects = [
       "Multimedia performance which combines animation, video, sound, video mapping and stage design. It contributes to build an interdisciplinary bridge between science and art taking as a starting point the blackbody radiation experiment made by Max Planck in 1900, which is the beginning of quantum mechanics.",
     client: "Bauhaus Universität, Weimar. 2016",
     role: "Concept, project management, animation, editing, choreography, photography and stage design",
-    animationTechniques:
-      "Trapcode Suite (After Effects), Legetrick, Stopmotion",
+    animationTechniques: "Trapcode Suite (After Effects), Legetrick, Stopmotion",
     software: "Adobe After Effects, Premier, Dragon Frame",
     team: "Melisa Palacio López",
     soundComposition: "Bert Liebold // noise canteen",
@@ -204,8 +201,7 @@ export const projects = [
       "La Diosa del Agua merges several animation techniques resulting in a live performance. Dance, animation and video are combined to present a personal interpretation of the deity of water: bright, mobile and colorful. The goddess is awake and with her movement and grace travels into the fluid matter; she bridges heaven and earth through the rainbow and with her beauty and favor expands the forest where a red tree is alive to spread again the water.",
     client: "Bauhaus Universität - Weimar, Germany",
     role: "Conception, choreography, dance and animation",
-    animationTechniques:
-      "Stopmotion, legetrick, paint on glass, Adobe After Effects",
+    animationTechniques: "Stopmotion, legetrick, paint on glass, Adobe After Effects",
     software: "Adobe After Effects, Premier, Dragon Frame",
     team: "Melisa Palacio López",
     soundComposition: "Bert Liebold // noise canteen",

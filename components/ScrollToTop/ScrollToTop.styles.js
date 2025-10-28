@@ -36,7 +36,8 @@ export const ScrollButton = styled.button`
 
   &:focus {
     outline: none;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4),
+    box-shadow:
+      0 4px 15px rgba(102, 126, 234, 0.4),
       0 0 0 3px rgba(102, 126, 234, 0.2);
   }
 

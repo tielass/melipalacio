@@ -13,7 +13,6 @@ export const ShowreelContainer = styled.section`
   }
 `;
 
-
 export const VideoContainer = styled.div`
   position: relative;
   width: 100%;
@@ -22,6 +21,11 @@ export const VideoContainer = styled.div`
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   background-color: #000;
+
+  @media (max-width: 768px) {
+    aspect-ratio: 9/16;
+    max-width: 100%;
+  }
 
   iframe {
     width: 100%;

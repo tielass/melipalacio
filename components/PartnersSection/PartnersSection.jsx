@@ -14,9 +14,8 @@ export default function PartnersSection() {
       <PartnersHeader>
         <SectionTitle>Partners</SectionTitle>
         <SectionDescription>
-          These logos represent a part of my journey—brands and teams I've been
-          lucky to collaborate with. Every partnership has inspired new ideas
-          and pushed my work in exciting directions.
+          These logos represent a part of my journey—brands and teams I've been lucky to collaborate
+          with. Every partnership has inspired new ideas and pushed my work in exciting directions.
         </SectionDescription>
       </PartnersHeader>
 

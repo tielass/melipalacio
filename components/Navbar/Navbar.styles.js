@@ -9,12 +9,10 @@ export const NavbarContainer = styled.nav`
   z-index: 1000;
   background: transparent;
   transition: all 0.3s ease;
-  min-height: ${(props) =>
-    props.isHomePage ? "80px" : props.isScrolled ? "80px" : "200px"};
+  min-height: ${(props) => (props.isHomePage ? "80px" : props.isScrolled ? "80px" : "200px")};
 
   @media (max-width: 768px) {
-    min-height: ${(props) =>
-      props.isHomePage ? "60px" : props.isScrolled ? "60px" : "100px"};
+    min-height: ${(props) => (props.isHomePage ? "60px" : props.isScrolled ? "60px" : "100px")};
   }
 `;
 
@@ -37,11 +35,7 @@ export const NavbarContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: ${(props) =>
-    props.isHomePage
-      ? "1rem 4rem"
-      : props.isScrolled
-      ? "1rem 4rem"
-      : "2rem 4rem"};
+    props.isHomePage ? "1rem 4rem" : props.isScrolled ? "1rem 4rem" : "2rem 4rem"};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,14 +46,9 @@ export const NavbarContent = styled.div`
 
   @media (max-width: 768px) {
     padding: ${(props) =>
-      props.isHomePage
-        ? "0.75rem 2rem"
-        : props.isScrolled
-        ? "0.75rem 2rem"
-        : "1.5rem 2rem"};
-    flex-direction: column;
-    gap: ${(props) =>
-      props.isHomePage ? "0.5rem" : props.isScrolled ? "0.5rem" : "1rem"};
+      props.isHomePage ? "0.75rem 1rem" : props.isScrolled ? "0.75rem 1rem" : "1rem 1rem"};
+    flex-direction: row;
+    gap: 0;
   }
 `;
 
@@ -120,10 +109,7 @@ export const NavLinks = styled.div`
   transform: translateX(-50%);
 
   @media (max-width: 768px) {
-    gap: 2rem;
-    position: static;
-    transform: none;
-    order: 2;
+    display: none;
   }
 `;
 
@@ -135,8 +121,7 @@ export const NavLink = styled(Link, {
   font-size: 1rem;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  text-shadow: ${(props) =>
-    props.isScrolled ? "none" : "0 1px 3px rgba(0, 0, 0, 0.5)"};
+  text-shadow: ${(props) => (props.isScrolled ? "none" : "0 1px 3px rgba(0, 0, 0, 0.5)")};
 
   &:hover {
     opacity: 0.8;
@@ -150,8 +135,7 @@ export const SocialIcons = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    gap: 1rem;
-    order: 3;
+    display: none;
   }
 `;
 
@@ -168,4 +152,61 @@ export const SocialIcon = styled.a`
     opacity: 0.8;
     transform: scale(1.1);
   }
+`;
+
+// Mobile only elements
+export const HamburgerButton = styled.button`
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0.25rem;
+  cursor: pointer;
+  line-height: 0;
+
+  @media (max-width: 768px) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const MobileOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 999; /* below navbar (1000) so content sits above? we raise inner */
+`;
+
+export const MobileMenu = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 360px;
+  background: rgba(32, 32, 32, 0.95);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  z-index: 1001;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+`;
+
+export const MobileLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const MobileFooter = styled.div`
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
 `;

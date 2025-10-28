@@ -3,6 +3,11 @@ import { theme } from "../../styles/theme";
 
 export const ContactContainer = styled.section`
   padding: 16rem 0 4rem 0;
+
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+    padding: 4rem 2rem 2rem;
+  }
 `;
 
 export const ContactHeader = styled.div`
@@ -25,7 +30,7 @@ export const ServiceTags = styled.div`
   margin-top: 4rem;
 
   @media (max-width: 768px) {
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
 `;
 

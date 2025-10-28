@@ -36,11 +36,10 @@ export default function HeroSection() {
       <ContentContainer>
         <TextContent>
           <AboutText>
-            I shape movement into meaning—whether through dancing bodies,
-            flowing illustrations, or cinematic motion design, I seek to
-            translate emotion into form. My work lives in the spaces between
-            rhythm and stillness, where visuals and gestures become poetry
-            without words.
+            I shape movement into meaning—whether through dancing bodies, flowing illustrations, or
+            cinematic motion design, I seek to translate emotion into form. My work lives in the
+            spaces between rhythm and stillness, where visuals and gestures become poetry without
+            words.
           </AboutText>
         </TextContent>
       </ContentContainer>

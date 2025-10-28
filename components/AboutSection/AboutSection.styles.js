@@ -5,6 +5,11 @@ export const AboutContainer = styled.section`
   background-color: ${theme.colors.white};
   padding: 16rem 0 4rem 0;
   min-height: 100vh;
+
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+    padding: 4rem 2rem 2rem;
+  }
 `;
 
 export const AboutHeader = styled.div`
@@ -15,7 +20,6 @@ export const AboutHeader = styled.div`
   margin-right: auto;
   padding: 0 2rem;
 `;
-
 
 export const AboutContent = styled.div`
   max-width: 1200px;

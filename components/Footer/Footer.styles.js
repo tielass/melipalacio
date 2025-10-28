@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 
 export const FooterContainer = styled.footer`
-  background-color: #0D0D33;
+  background-color: #0d0d33;
   color: white;
   padding: 4rem 4rem 2rem;
   display: flex;

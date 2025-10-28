@@ -114,7 +114,9 @@ export const ViewAllButton = styled.button`
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   align-self: center;
   margin-top: 1rem;
 

@@ -9,11 +9,7 @@ import {
   ServiceTag,
   ContactContent,
 } from "./ContactSection.styles";
-import {
-  SectionTitle,
-  SectionDescription,
-  BodyText,
-} from "../../styles/Typography";
+import { SectionTitle, SectionDescription, BodyText } from "../../styles/Typography";
 
 export default function ContactSection() {
   return (
@@ -22,9 +18,8 @@ export default function ContactSection() {
         <SectionTitle>Contact</SectionTitle>
         <SectionDescription>Let's Create Something Amazing</SectionDescription>
         <BodyText>
-          Ready to bring your vision to life? I specialize in creating stunning
-          motion graphics, animations, and visual experiences that captivate
-          audiences and tell compelling stories.
+          Ready to bring your vision to life? I specialize in creating stunning motion graphics,
+          animations, and visual experiences that captivate audiences and tell compelling stories.
         </BodyText>
         <ServiceTags>
           <ServiceTag>Motion Graphics</ServiceTag>

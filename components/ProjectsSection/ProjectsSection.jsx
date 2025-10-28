@@ -49,9 +49,7 @@ export default function ProjectsSection() {
                   <div style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>
                     {project.category}
                   </div>
-                  <div style={{ fontSize: "0.9rem", opacity: 0.9 }}>
-                    View Project
-                  </div>
+                  <div style={{ fontSize: "0.9rem", opacity: 0.9 }}>View Project</div>
                 </div>
               </ProjectOverlay>
             </ProjectImage>
@@ -60,9 +58,7 @@ export default function ProjectsSection() {
         ))}
       </ProjectsGrid>
 
-      <ViewAllButton onClick={() => router.push("/portfolio")}>
-        View All Projects
-      </ViewAllButton>
+      <ViewAllButton onClick={() => router.push("/portfolio")}>View All Projects</ViewAllButton>
     </ProjectsContainer>
   );
 }

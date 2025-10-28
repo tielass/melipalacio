@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FaLinkedin, FaInstagramSquare, FaPinterest } from "react-icons/fa";
+import { Menu, X } from "lucide-react";
 import {
   NavbarContainer,
   NavbarContent,
@@ -14,11 +15,17 @@ import {
   NavLink,
   SocialIcons,
   SocialIcon,
+  HamburgerButton,
+  MobileOverlay,
+  MobileMenu,
+  MobileLinks,
+  MobileFooter,
 } from "./Navbar.styles";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isAboutPage = pathname === "/about";
   const isContactPage = pathname === "/contact";
   const isPortfolioPage = pathname === "/portfolio";
@@ -33,6 +40,8 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <NavbarContainer isScrolled={isScrolled} isHomePage={isHomePage}>
@@ -82,6 +91,9 @@ export default function Navbar() {
             />
           </Link>
         </Logo>
+        <HamburgerButton aria-label="Open menu" onClick={() => setIsMenuOpen(true)}>
+          <Menu size={28} />
+        </HamburgerButton>
         <NavLinks isScrolled={isScrolled}>
           <NavLink href="/portfolio" isScrolled={isScrolled}>
             Portfolio
@@ -98,9 +110,7 @@ export default function Navbar() {
             href="https://www.linkedin.com/in/melisa-palacio/"
             aria-label="LinkedIn"
             style={{
-              filter: isScrolled
-                ? "none"
-                : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
+              filter: isScrolled ? "none" : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
             }}
           >
             <FaLinkedin size={20} />
@@ -109,9 +119,7 @@ export default function Navbar() {
             href="https://www.instagram.com/meli_palacio/ "
             aria-label="Instagram"
             style={{
-              filter: isScrolled
-                ? "none"
-                : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
+              filter: isScrolled ? "none" : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
             }}
           >
             <FaInstagramSquare size={20} />
@@ -120,15 +128,61 @@ export default function Navbar() {
             href="https://de.pinterest.com/melixisp/_saved/"
             aria-label="Pinterest"
             style={{
-              filter: isScrolled
-                ? "none"
-                : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
+              filter: isScrolled ? "none" : "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))",
             }}
           >
             <FaPinterest size={20} />
           </SocialIcon>
         </SocialIcons>
       </NavbarContent>
+
+      {isMenuOpen && (
+        <>
+          <MobileOverlay onClick={closeMenu} />
+          <MobileMenu>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <NavLink href="/" onClick={closeMenu}>
+                Home
+              </NavLink>
+              <button
+                aria-label="Close menu"
+                onClick={closeMenu}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  color: "white",
+                  padding: 4,
+                  cursor: "pointer",
+                }}
+              >
+                <X size={28} />
+              </button>
+            </div>
+            <MobileLinks>
+              <NavLink href="/portfolio" onClick={closeMenu}>
+                Portfolio
+              </NavLink>
+              <NavLink href="/about" onClick={closeMenu}>
+                About
+              </NavLink>
+              <NavLink href="/contact" onClick={closeMenu}>
+                Contact
+              </NavLink>
+            </MobileLinks>
+            <MobileFooter>
+              <SocialIcon href="https://www.linkedin.com/in/melisa-palacio/" aria-label="LinkedIn">
+                <FaLinkedin size={22} />
+              </SocialIcon>
+              <SocialIcon href="https://www.instagram.com/meli_palacio/ " aria-label="Instagram">
+                <FaInstagramSquare size={22} />
+              </SocialIcon>
+              <SocialIcon href="https://de.pinterest.com/melixisp/_saved/" aria-label="Pinterest">
+                <FaPinterest size={22} />
+              </SocialIcon>
+            </MobileFooter>
+          </MobileMenu>
+        </>
+      )}
     </NavbarContainer>
   );
 }

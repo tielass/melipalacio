@@ -16,6 +16,10 @@ export const HeaderImage = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    height: 100px;
+  }
 `;
 
 export const ProjectTitle = styled.h1`
@@ -35,10 +39,10 @@ export const ProjectTitle = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 1rem 0 0.5rem 0;
     max-width: 80%;
-    padding-left: 4rem;
+    padding-left: 2rem;
   }
 
   @media (max-width: 480px) {
@@ -59,8 +63,8 @@ export const ProjectDescription = styled.p`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
-    padding: 0 1rem 2rem 1rem;
+    font-size: 1.1rem;
+    padding: 0 2rem 2rem 2rem;
   }
 `;
 
@@ -71,7 +75,7 @@ export const VideoSection = styled.div`
   padding: 0 2rem;
 
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin-bottom: 2rem;
   }
 `;
@@ -124,7 +128,7 @@ export const GallerySection = styled.div`
   padding: 0 2rem;
 
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin-bottom: 2rem;
   }
 `;
@@ -135,8 +139,8 @@ export const ImageGrid = styled.div`
   gap: 1rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
   }
 `;
 
@@ -192,15 +196,13 @@ export const GalleryNavButton = styled.button`
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;
-    ${(props) =>
-      props.position === "left" ? "left: 0.5rem;" : "right: 0.5rem;"}
+    ${(props) => (props.position === "left" ? "left: 0.5rem;" : "right: 0.5rem;")}
   }
 
   @media (max-width: 480px) {
     width: 35px;
     height: 35px;
-    ${(props) =>
-      props.position === "left" ? "left: 0.25rem;" : "right: 0.25rem;"}
+    ${(props) => (props.position === "left" ? "left: 0.25rem;" : "right: 0.25rem;")}
   }
 `;
 
@@ -215,14 +217,12 @@ export const ProjectNavContainer = styled.div`
   ${(props) => (props.position === "left" ? "left: 1rem;" : "right: 1rem;")}
 
   @media (max-width: 768px) {
-    ${(props) =>
-      props.position === "left" ? "left: 0.5rem;" : "right: 0.5rem;"}
+    ${(props) => (props.position === "left" ? "left: 0.5rem;" : "right: 0.5rem;")}
     gap: 0.5rem;
   }
 
   @media (max-width: 480px) {
-    ${(props) =>
-      props.position === "left" ? "left: 0.25rem;" : "right: 0.25rem;"}
+    ${(props) => (props.position === "left" ? "left: 0.25rem;" : "right: 0.25rem;")}
     gap: 0.4rem;
   }
 `;
@@ -261,13 +261,10 @@ export const ProjectNavButton = styled.button`
 export const ProjectNavInfo = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: ${(props) =>
-    props.position === "left" ? "flex-start" : "flex-end"};
+  align-items: ${(props) => (props.position === "left" ? "flex-start" : "flex-end")};
   max-width: 120px;
   opacity: 0;
-  transform: translateX(
-    ${(props) => (props.position === "left" ? "-10px" : "10px")}
-  );
+  transform: translateX(${(props) => (props.position === "left" ? "-10px" : "10px")});
   transition: all 0.3s ease;
   pointer-events: none;
 
@@ -340,20 +337,28 @@ export const ProjectDetails = styled.div`
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 1rem 2rem 1rem;
+    padding: 0 2rem 2rem 2rem;
   }
 `;
 
 export const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;
 
 export const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;
 
 export const SectionTitle = styled.h3`
@@ -552,15 +557,15 @@ export const BackButton = styled(Link)`
 
   @media (max-width: 768px) {
     top: calc(300px + 1rem);
-    left: 1rem;
+    left: 2rem;
     padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 480px) {
     top: calc(300px + 0.5rem);
-    left: 0.5rem;
+    left: 2rem;
     padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 `;

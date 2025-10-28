@@ -3,7 +3,9 @@ import { theme } from "../../styles/theme";
 
 export const PartnersContainer = styled.section`
   background-color: ${theme.colors.white};
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 
 export const PartnersHeader = styled.div`
@@ -49,7 +51,9 @@ export const PartnerLogo = styled.div`
   justify-content: center;
   width: 100%;
   height: 80px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 
   &:hover {
     transform: scale(1.5);
@@ -63,8 +67,8 @@ export const PartnerLogo = styled.div`
     transition: filter 0.3s ease;
 
     &:hover {
-      filter: grayscale(0%) sepia(100%) saturate(2000%) hue-rotate(247deg)
-        brightness(0.8) contrast(1.2);
+      filter: grayscale(0%) sepia(100%) saturate(2000%) hue-rotate(247deg) brightness(0.8)
+        contrast(1.2);
     }
   }
 `;
