@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Share2, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ProjectDetailContainer,
   HeaderImage,
@@ -42,6 +42,7 @@ import {
 export default function ProjectDetail({ project, projects, currentProjectIndex, onProjectChange }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
@@ -74,6 +75,54 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
     }
   };
 
+  // Touch swipe handling
+  const touchStart = useRef({ x: 0, y: 0, time: 0, active: false });
+
+  const onTouchStart = (e) => {
+    const t = e.touches?.[0];
+    if (!t) return;
+    touchStart.current = { x: t.clientX, y: t.clientY, time: Date.now(), active: true };
+  };
+
+  const shouldTriggerSwipe = (endTouch) => {
+    const dx = endTouch.clientX - touchStart.current.x;
+    const dy = endTouch.clientY - touchStart.current.y;
+    const dt = Date.now() - touchStart.current.time;
+    const horizontalEnough = Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy);
+    const fastEnough = dt < 600;
+    return { dx, horizontalEnough, fastEnough };
+  };
+
+  const onTouchEndProject = (e) => {
+    if (!touchStart.current.active) return;
+    const t = e.changedTouches?.[0];
+    touchStart.current.active = false;
+    if (!t) return;
+    const { dx, horizontalEnough, fastEnough } = shouldTriggerSwipe(t);
+    if (horizontalEnough && fastEnough && projects && onProjectChange) {
+      if (dx < 0) {
+        goToNextProject();
+      } else {
+        goToPreviousProject();
+      }
+    }
+  };
+
+  const onTouchEndLightbox = (e) => {
+    if (!touchStart.current.active) return;
+    const t = e.changedTouches?.[0];
+    touchStart.current.active = false;
+    if (!t) return;
+    const { dx, horizontalEnough, fastEnough } = shouldTriggerSwipe(t);
+    if (horizontalEnough && fastEnough) {
+      if (dx < 0) {
+        goToNext();
+      } else {
+        goToPrevious();
+      }
+    }
+  };
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -95,6 +144,26 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [lightboxOpen]);
+
+  // Responsive: detect mobile to hide project nav arrows
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const update = () => setIsMobile(mediaQuery.matches);
+    update();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", update);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(update);
+    }
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", update);
+      } else if (mediaQuery.removeListener) {
+        mediaQuery.removeListener(update);
+      }
+    };
+  }, []);
 
   return (
     <ProjectDetailContainer>
@@ -126,8 +195,8 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
       )}
 
       {project.images && project.images.length > 0 && (
-        <GallerySection>
-          {projects && onProjectChange && (
+        <GallerySection onTouchStart={onTouchStart} onTouchEnd={onTouchEndProject}>
+          {projects && onProjectChange && !isMobile && (
             <ProjectNavContainer position="left">
               <ProjectNavButton onClick={goToPreviousProject}>
                 <ChevronLeft size={24} />
@@ -177,7 +246,7 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
             ))}
           </ImageGrid>
 
-          {projects && onProjectChange && (
+          {projects && onProjectChange && !isMobile && (
             <ProjectNavContainer position="right">
               <ProjectNavInfo position="right">
                 <ProjectNavThumbnail>
@@ -219,7 +288,17 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
       {/* Lightbox */}
       {lightboxOpen && project.images && (
         <LightboxOverlay onClick={closeLightbox}>
-          <LightboxContainer onClick={(e) => e.stopPropagation()}>
+          <LightboxContainer
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={(e) => {
+              e.stopPropagation();
+              onTouchStart(e);
+            }}
+            onTouchEnd={(e) => {
+              e.stopPropagation();
+              onTouchEndLightbox(e);
+            }}
+          >
             <CloseButton onClick={closeLightbox}>
               <X size={24} />
             </CloseButton>
