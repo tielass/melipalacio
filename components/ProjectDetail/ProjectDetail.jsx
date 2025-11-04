@@ -37,6 +37,9 @@ import {
   NavigationButton,
   ImageCounter,
   BackButton,
+  BackButtonWrapper,
+  MobileBackButton,
+  SwipeTooltip,
 } from "./ProjectDetail.styles";
 
 export default function ProjectDetail({ project, projects, currentProjectIndex, onProjectChange }) {
@@ -166,13 +169,28 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
   }, []);
 
   return (
-    <ProjectDetailContainer>
-      <BackButton href="/portfolio">
+    <ProjectDetailContainer onTouchStart={onTouchStart} onTouchEnd={onTouchEndProject}>
+      <BackButton
+        href="/portfolio"
+        onTouchStart={(e) => e.stopPropagation()}
+        onTouchEnd={(e) => e.stopPropagation()}
+      >
         <ChevronLeft size={20} />
         Back
       </BackButton>
 
       <HeaderImage />
+      <BackButtonWrapper>
+        <MobileBackButton
+          href="/portfolio"
+          onTouchStart={(e) => e.stopPropagation()}
+          onTouchEnd={(e) => e.stopPropagation()}
+        >
+          <ChevronLeft size={20} />
+          Back
+        </MobileBackButton>
+        <SwipeTooltip>Swipe left/right to navigate the Projects</SwipeTooltip>
+      </BackButtonWrapper>
       <ProjectTitle>{project.title}</ProjectTitle>
       <ProjectDescription>{project.description}</ProjectDescription>
 
@@ -195,7 +213,7 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
       )}
 
       {project.images && project.images.length > 0 && (
-        <GallerySection onTouchStart={onTouchStart} onTouchEnd={onTouchEndProject}>
+        <GallerySection>
           {projects && onProjectChange && !isMobile && (
             <ProjectNavContainer position="left">
               <ProjectNavButton onClick={goToPreviousProject}>
@@ -351,11 +369,11 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
                     {project.interestingLinks.map((link, index) => (
                       <a
                         key={index}
-                        href={link.startsWith("http") ? link : "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={link.url}
+                        target={link.url !== "#" ? "_blank" : undefined}
+                        rel={link.url !== "#" ? "noopener noreferrer" : undefined}
                       >
-                        {link}
+                        {link.title}
                       </a>
                     ))}
                   </div>
@@ -387,11 +405,11 @@ export default function ProjectDetail({ project, projects, currentProjectIndex, 
                 {project.interestingLinks.map((link, index) => (
                   <a
                     key={index}
-                    href={link.startsWith("http") ? link : "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={link.url}
+                    target={link.url !== "#" ? "_blank" : undefined}
+                    rel={link.url !== "#" ? "noopener noreferrer" : undefined}
                   >
-                    {link}
+                    {link.title}
                   </a>
                 ))}
               </SectionContent>

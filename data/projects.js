@@ -16,28 +16,33 @@ export const projects = [
     content:
       "The story follows Mrs. Patricia Osborne and The Three Investigators as they embark on a mysterious adventure involving a singing snake. The narrative unfolds through stunning visual sequences that take full advantage of the 360° fulldome format, creating an immersive experience that surrounds the audience.",
     interestingLinks: [
-      "https://dreifragezeichen.de/live/planetarium",
-      "Weltweit erfolgreichste Hörspielserie feiert Weltpremiere",
-      "Planetarium Hamburg",
-      "360° Fulldome Experience",
+      {
+        title: "Live auf der Planetarium Berlin",
+        url: "https://www.planetarium.berlin/presse/Die-drei-Fragezeichen",
+      },
+      {
+        title: "Live auf der Planetarium Hamburg",
+        url: "https://www.planetarium-hamburg.de/de/veranstaltungen-tickets/details/die-drei-und-die-singende-schlange",
+      },
     ],
     videoUrl: "https://www.youtube.com/embed/nMMH1J9sXZs",
     videoTitle: "Die drei ??? und die singende Schlange (Trailer DE)",
     images: [
-      "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-01.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-02.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-03.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-04.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-06.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-07.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-08.webp",
-      "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-09.webp",
-      "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-10.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-11.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-12.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-13.webp",
       "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-14.webp",
-      "/images/portfolio/motion/Die Drei und die singende Schlange/projekt-s-16.webp",
+      "/images/portfolio/motion/Die Drei und die singende Schlange/S01_02.png",
+      "/images/portfolio/motion/Die Drei und die singende Schlange/S5.2_02.png",
+      "/images/portfolio/motion/Die Drei und die singende Schlange/S5.2_03.png",
+      "/images/portfolio/motion/Die Drei und die singende Schlange/S08_03.png",
+      "/images/portfolio/motion/Die Drei und die singende Schlange/S12_01.png",
     ],
   },
   {
@@ -166,7 +171,7 @@ export const projects = [
     team: "Melisa Palacio López",
     liveSoundComposition: "noise canteen // pleines & liebold",
     concept:
-      "The project is based on three conceptions of space. Gilles Deleuze and territory: The body interacts with space through movement and a black line. Bodies create new territories while preserving immutable human aspects. The ideas of Leibniz: The transformation of images into new architectures, Einstein's conceptions, and the animation's relation to geodesic forms, grids, and spacetime curvature influenced by gravitational fields. The body constitutes spacetime.",
+      "S P A C E is a multimedia performance where I bring together the ideas of Gilles Deleuze, Gottfried Wilhelm von Leibniz, and Albert Einstein to explore space as something both personal and relational. Starting from Deleuze's notion of territory, I construct my own space through sound, videos of Medellín, and animated sketches. I dance with a black line that both limits and expands my movement. As my body becomes a shadow, it no longer represents only myself but all those who venture beyond their boundaries in search of new territories. Inspired by Leibniz's relational space and Einstein's spacetime continuum, this performance reflects my journey through transformation and discovery while acknowledging the unchanging essence that remains within every human experience.",
     content:
       "This performance piece combines live music and dance with animation and videos projected over a paper screen. The work explores the intersection of scientific concepts with artistic expression, creating a multimedia experience that examines how bodies interact with space, how images transform into new architectures, and how gravitational fields influence the curvature of spacetime. The performance demonstrates the body's role in constituting spacetime itself.",
     videoUrl: "https://www.youtube.com/embed/rd8cwCmA4Ak",
@@ -245,16 +250,14 @@ export const projects = [
     thumbnail: "/images/thumbnails/paintings-thumbnail.webp",
     category: "Painting",
     description:
-      "A collection of digital and traditional paintings exploring various themes and techniques.",
+      "Painting collection a space of vibrations with mixed techniques as acrylic and collage.",
     client: "Personal Art Project",
     role: "Painting, digital art, concept development",
     animationTechniques: "Traditional and digital painting techniques",
     software: "Adobe Photoshop, Traditional Media",
     team: "Melisa Palacio",
     concept:
-      "This collection showcases a range of painting styles and techniques, from traditional canvas work to digital painting, exploring themes of nature, abstraction, and human emotion.",
-    content:
-      "Each piece in the collection represents a different exploration of color, form, and technique, demonstrating versatility and artistic growth across different media.",
+      "This series of acrylic paintings emerges from the intersection between movement, nature, and emotion. Each work is born from my exploration of photographs taken in the Amazonia—images that carry the pulse of the forest, its rhythm, and its infinite layers of life. Through color and gesture, I translate those sensations into a visual choreography, where painting becomes a form of dance. The brushstroke follows the body’s impulse, and color vibrates like sound—echoing the connection between inner movement and the living energy of the landscape. The result is a collection that captures both the stillness and the dynamism of space, revealing how the body, nature, and color intertwine in a continuous act of transformation.",
     images: [
       "/images/portfolio/painting/Painting_04.png",
       "/images/portfolio/painting/Painting_06.png",
@@ -266,6 +269,35 @@ export const projects = [
       "/images/portfolio/painting/Painting_14.png",
       "/images/portfolio/painting/Painting_16.png",
       "/images/portfolio/painting/Painting_17.png",
+    ],
+  },
+  {
+    id: 9,
+    title: "Kommetentanz",
+    thumbnail: "/images/portfolio/motion/Kommententanz/KT2.1.webp",
+    category: "Painting",
+    description:
+      "A collection of digital and traditional paintings exploring various themes and techniques.",
+    client: "Personal Art Project",
+    role: "Painting, digital art, concept development",
+    animationTechniques: "Traditional and digital painting techniques",
+    software: "Adobe Photoshop, Traditional Media",
+    team: "Melisa Palacio",
+    concept:
+      "This collection showcases a range of painting styles and techniques, from traditional canvas work to digital painting, exploring themes of nature, abstraction, and human emotion.",
+    content:
+      "Each piece in the collection represents a different exploration of color, form, and technique, demonstrating versatility and artistic growth across different media.",
+    images: [
+      "/images/portfolio/motion/Kommententanz/Kometentanz-summary2.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz11.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz3.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz4.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz5.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz8.webp",
+      "/images/portfolio/motion/Kommententanz/KT2.1.webp",
+      "/images/portfolio/motion/Kommententanz/KT8.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz9.webp",
+      "/images/portfolio/motion/Kommententanz/Kometentanz2.webp",
     ],
   },
 ];

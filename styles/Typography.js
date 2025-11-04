@@ -21,7 +21,7 @@ export const SectionTitle = styled.h2`
 export const SectionDescription = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
-  text-align: justify;
+  text-align: center;
   color: #030335;
   max-width: 1200px;
   margin-bottom: 4rem;

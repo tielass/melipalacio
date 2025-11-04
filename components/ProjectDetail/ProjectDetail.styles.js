@@ -30,8 +30,7 @@ export const ProjectTitle = styled.h1`
   text-align: center;
   padding: 2rem 0 1rem 0;
   font-family: ${theme.fonts.primary};
-  max-width: 70%;
-  padding-left: 8rem;
+  max-width: 30%;
 
   @media (max-width: 1200px) {
     max-width: 75%;
@@ -42,12 +41,10 @@ export const ProjectTitle = styled.h1`
     font-size: 2.2rem;
     padding: 1rem 0 0.5rem 0;
     max-width: 80%;
-    padding-left: 2rem;
   }
 
   @media (max-width: 480px) {
     max-width: 85%;
-    padding-left: 3rem;
   }
 `;
 
@@ -526,6 +523,66 @@ export const ImageCounter = styled.div`
   }
 `;
 
+export const BackButtonWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+  }
+`;
+
+export const SwipeTooltip = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: ${theme.colors.background};
+    color: ${theme.colors.text};
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: ${theme.fonts.primary};
+    white-space: nowrap;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    gap: 0.4rem;
+  }
+`;
+
+export const MobileBackButton = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: ${theme.colors.primary};
+  color: ${theme.colors.white};
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: ${theme.fonts.primary};
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: ${theme.colors.backgroundDark};
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+`;
+
 export const BackButton = styled(Link)`
   position: absolute;
   top: calc(300px + 2.2rem);
@@ -556,15 +613,10 @@ export const BackButton = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    top: calc(300px + 1rem);
-    left: 2rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    display: none;
   }
 
   @media (max-width: 480px) {
-    top: calc(300px + 0.5rem);
-    left: 2rem;
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }
