@@ -275,18 +275,15 @@ export const projects = [
     id: 9,
     title: "Kommetentanz",
     thumbnail: "/images/portfolio/motion/Kommententanz/KT2.1.webp",
-    category: "Painting",
+    category: "Motion Design & Animation",
     description:
-      "A collection of digital and traditional paintings exploring various themes and techniques.",
+      "Multimedial piece that combines 3D and 2D animation in 360° fulldome format. Audiovisual design, theater and dance were incorporated to participate in the ‘Fulldome Festival 2014’ in Jena, Germany.",
     client: "Personal Art Project",
-    role: "Painting, digital art, concept development",
-    animationTechniques: "Traditional and digital painting techniques",
-    software: "Adobe Photoshop, Traditional Media",
+    animationTechniques: "3D animation and modelling combined with digital photography.",
+    software: "3ds Max, Photoshop, Premier",
     team: "Melisa Palacio",
     concept:
-      "This collection showcases a range of painting styles and techniques, from traditional canvas work to digital painting, exploring themes of nature, abstraction, and human emotion.",
-    content:
-      "Each piece in the collection represents a different exploration of color, form, and technique, demonstrating versatility and artistic growth across different media.",
+      "“Kometentanz, Astrale Pantomime in zwei Aufzügen” or “Comet Dance, Astral Pantomime in two Acts”, is the ballet piece written by the German writer Paul Scheerbart in 1903. It is the narrative of an unsatisfied king, surrounded by his court with a poet, harem, magician, servants and an executioner. He is astonished by the presence of the comets, perhaps it is the only thing that makes him feel alive. The piece is a combination of cosmic objects with the human yearning of going beyond what is visible in the earth and communicating with celestial manifestations.",
     images: [
       "/images/portfolio/motion/Kommententanz/Kometentanz-summary2.webp",
       "/images/portfolio/motion/Kommententanz/Kometentanz11.webp",

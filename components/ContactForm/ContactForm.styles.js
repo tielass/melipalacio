@@ -93,4 +93,31 @@ export const SubmitButton = styled.button`
   &:hover {
     background: ${theme.colors.backgroundDark};
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`;
+
+export const StatusMessage = styled.div`
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+`;
+
+export const SuccessMessage = styled(StatusMessage)`
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+`;
+
+export const ErrorMessage = styled(StatusMessage)`
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
 `;
