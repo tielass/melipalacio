@@ -69,6 +69,11 @@ export default function ContactForm() {
     <FormContainer>
       <FormTitle>Contact me</FormTitle>
       <Form ref={form} onSubmit={handleSubmit}>
+        <input
+            type="hidden"
+            name="to_email"
+            value="melisa.palaciolopez@gmail.com"
+        />
         <FormGroup>
           <FormLabel htmlFor="user_email">Email</FormLabel>
           <FormInput
