@@ -17,7 +17,7 @@ export default function ShowreelSection() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const desktopVideoSrc = "https://player.vimeo.com/video/204369278?autoplay=0&loop=0&muted=0";
+  const desktopVideoSrc = "https://player.vimeo.com/video/1130621840?autoplay=0&loop=0&muted=0";
   const mobileVideoSrc = "https://player.vimeo.com/video/1130621840?autoplay=0&loop=0&muted=0";
 
   return (
